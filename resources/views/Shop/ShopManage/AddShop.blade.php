@@ -29,13 +29,13 @@
                         </div>
                         <div class="col-md-6 pr-1">
                           <div class="form-group">
-                            <label>Content mô tả</label>
+                            <label>Content</label>
                             <input type="text" class="form-control"  placeholder="Store" name="content" required>
                           </div>
                         </div>
                         <div class="col-md-6 pl-3">
                           <div class="form-group">
-                            <label>Thành phố</label>
+                            <label>Location</label>
                             <select class="form-control" id="addresslv1" name="id_city">
                               @foreach($GetCitys as $GetCitys)
                               <option value="{{$GetCitys->id}}">{{$GetCitys->name}}</option>
@@ -45,7 +45,7 @@
                         </div>
                         <div class="col-md-6 pl-3">
                           <div class="form-group">
-                            <label>Chợ</label>
+                            <label>Market</label>
                             <select class="form-control" id="addresslv2" name="id_market" required>
                               @foreach($GetMarkets as $GetMarkets)
                               <option value="{{$GetMarkets->id}}">{{$GetMarkets->name}}</option>

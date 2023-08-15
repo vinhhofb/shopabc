@@ -1,5 +1,5 @@
 @extends("Shop.Layouts.Master")
-@section('Title', 'Information cá nhân')
+@section('Title', 'Information')
 @section('Content')
 <div class="container-scroller">
   <!-- partial:partials/_navbar.html -->

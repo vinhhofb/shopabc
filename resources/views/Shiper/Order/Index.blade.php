@@ -1,5 +1,5 @@
 @extends("Shiper.Layouts.Master")
-@section('Title', 'Nhận đơn hàng')
+@section('Title', 'Receive purchase order')
 @section('Content')
 <div class="container-scroller">
   <!-- partial:partials/_navbar.html -->
@@ -21,7 +21,7 @@
                 <div>
                   <div>
                     <div class="bg-white p-4" style="min-height: 300px;">
-                      <p class="font-weight-bold my-3" style="font-size:120%">Đơn hàng chờ nhận</p>
+                      <p class="font-weight-bold my-3" style="font-size:120%">Order pending</p>
                       <div class="container bg-white">
                         @php
                         $total=0;
@@ -78,7 +78,7 @@
                                 <div class="clboth"></div>
                                 <div class="text-center">
                                   <a href="{{url('kenh-giao-hang/nhan-don')."/".$getCart->id}}">
-                                    <button class="btn btn-light my-3">Nhận đơn hàng</button>
+                                    <button class="btn btn-light my-3">Receive purchase order</button>
                                   </a>
                                 </div>
                               </div>
@@ -89,7 +89,7 @@
                         @empty
                         <div class="pb-5" style="margin:auto;width: 350px;">
                           <img src="../index/images/icons/empty.svg" width="100%">
-                          <p class="text-center font-weight-bold mt-3">Rất tiếc, chưa có đơn hàng</p>
+                          <p class="text-center font-weight-bold mt-3">Sorry, no orders yet</p>
                         </div>
                       </div>
                     </div></div>

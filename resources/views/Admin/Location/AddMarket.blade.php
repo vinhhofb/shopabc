@@ -24,7 +24,7 @@
                             <div class="col-md-6 pr-1">
                                 <div class="form-group">
                                     <label>name</label>
-                                    <input type="text" class="form-control"  placeholder="Chợ" name="name" required>
+                                    <input type="text" class="form-control"  placeholder="Market" name="name" required>
                                 </div>
                             </div>
                             <div class="col-md-6 pr-1">

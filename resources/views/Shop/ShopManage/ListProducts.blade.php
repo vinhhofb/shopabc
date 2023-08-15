@@ -137,13 +137,13 @@
                                 <div class="modal-dialog" role="document">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Chuyển trạng thái sẵn hàng</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Availability change</h5>
                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                       </button>
                                     </div>
                                     <div class="modal-body">
-                                     <p>Khi bạn mở trạng thái có sẵn Products {{$GetProductByShop->name}}, {{$GetProductByShop->name}} Will show back at home page.</p>
+                                     <p>When you open the available status Products {{$GetProductByShop->name}}, {{$GetProductByShop->name}} Will show back at home page.</p>
                                    </div>
                                    <div class="p-2">
                                      <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>

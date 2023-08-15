@@ -40,10 +40,10 @@ class AccountController extends Controller
                     return redirect()->back()->with('msg', 'Tài khoản của bạn đã bị Lock');
                 }  
             }else{
-                return redirect()->back()->with('msg', 'Sai tài khoản hoặc mật khẩu');
+                return redirect()->back()->with('msg', 'Wrong account or password');
             }
         }else{
-             return redirect()->back()->with('msg', 'Sai tài khoản hoặc mật khẩu'); 
+             return redirect()->back()->with('msg', 'Wrong account or password'); 
         }  
 
     }

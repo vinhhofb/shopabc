@@ -35,7 +35,7 @@
     {{-- <li class="nav-item">
       <a class="nav-link" href="{{url('yeu-cau-ho-tro')}}">
         <i class="icon-paper menu-icon"></i>
-        <span class="menu-title">Yêu cầu hỗ trợ</span>
+        <span class="menu-title">Yêu cầu Support</span>
       </a>
     </li> --}}
 

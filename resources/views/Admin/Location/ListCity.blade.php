@@ -92,7 +92,7 @@
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                   <p>When delete {{$GetCity->name}}, All all shopchợ, shop, Products inside {{$GetCity->name}} Will delete</p>
+                                   <p>When delete {{$GetCity->name}}, All all shopMarket, shop, Products inside {{$GetCity->name}} Will delete</p>
                                  </div>
                                  <div class="p-2">
                                    <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>

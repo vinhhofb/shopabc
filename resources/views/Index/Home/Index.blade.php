@@ -38,7 +38,7 @@
 
   <script>
     @if(count($errors) > 0)
-    toastr.error("Vui lòng kiểm tra các trường");
+    toastr.error("Please check the fields");
     @endif
   </script>
 

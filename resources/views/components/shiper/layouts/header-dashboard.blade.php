@@ -11,7 +11,7 @@
     <div class=" ml-5 d-flex">
       <div class="mr-4 mt-2" style="height: 35px;">
         <a href="{{url('/kenh-giao-hang/nhan-don-hang')}}" class="d-flex">
-          <span class="tx" style="margin-top: 6px;">Nhận đơn hàng</span>
+          <span class="tx" style="margin-top: 6px;">Receive purchase order</span>
         </a>
       </div>
       

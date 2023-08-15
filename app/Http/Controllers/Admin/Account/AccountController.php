@@ -41,10 +41,10 @@ class AccountController extends Controller
                 Auth::login($user,true);
                 return Redirect::to('/admin/quan-ly-nguoi-dung');
             }else{
-                return redirect()->back()->with('msg', 'Sai tài khoản hoặc mật khẩu');
+                return redirect()->back()->with('msg', 'Wrong account or password');
             }
         }else{
-             return redirect()->back()->with('msg', 'Sai tài khoản hoặc mật khẩu'); 
+             return redirect()->back()->with('msg', 'Wrong account or password'); 
         }  
 
     }

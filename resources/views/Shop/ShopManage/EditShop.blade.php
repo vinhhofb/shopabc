@@ -29,7 +29,7 @@
                         </div>
                         <div class="col-md-6 pr-1">
                           <div class="form-group">
-                            <label>Content mô tả</label>
+                            <label>Content</label>
                             <input type="text" class="form-control"  placeholder="Store" name="content" required value="{{$GetShopById->content}}">
                           </div>
                         </div>

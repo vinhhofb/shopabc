@@ -24,7 +24,7 @@
                         <div class="col-md-6 pr-1">
                           <div class="form-group">
                             <label>name</label>
-                            <input type="text" class="form-control"  placeholder="Thành phố" value="{{$GetCityById->name}}" name="name" required>
+                            <input type="text" class="form-control"  placeholder="Location" value="{{$GetCityById->name}}" name="name" required>
                           </div>
                         </div>
                         <div class="col-md-4 px-1">

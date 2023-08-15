@@ -24,7 +24,7 @@
                             <div class="col-md-6 pr-1">
                                 <div class="form-group">
                                     <label>Location</label>
-                                    <input type="text" class="form-control"  placeholder="Thành phố" name="name" required>
+                                    <input type="text" class="form-control"  placeholder="Location" name="name" required>
                                 </div>
                             </div>
                             <div class="col-md-6 px-1">

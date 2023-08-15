@@ -67,7 +67,7 @@
 
   function start() {
     // document.body.append('Models Loaded')
-     $('#status').text('Đang tải dữ liệu')
+     $('#status').text('Loading dữ liệu')
 
     navigator.getUserMedia(
       { video:{} },

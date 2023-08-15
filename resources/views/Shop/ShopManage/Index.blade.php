@@ -94,13 +94,13 @@
                                 <div class="modal-dialog" role="document">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Lock Store của bạn</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Lock Store</h5>
                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                       </button>
                                     </div>
                                     <div class="modal-body">
-                                     <p>When you lock Store {{$GetShop->name}},Store {{$GetShop->name}} sẽ không được Show trên System.</p>
+                                     <p>When you lock Store {{$GetShop->name}},Store {{$GetShop->name}} will not be shown on System.</p>
                                    </div>
                                    <div class="p-2">
                                      <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>

@@ -57,7 +57,7 @@ Add to cart</button>
     @empty
     <div class="pb-5" style="margin:auto;width: 350px;">
       <img src="../index/images/icons/empty.svg" width="100%">
-      <p class="text-center font-weight-bold mt-3">Rất tiếc, No data yet</p>
+      <p class="text-center font-weight-bold mt-3">No data yet</p>
     </div>
     @endforelse
   </div>
@@ -65,7 +65,7 @@ Add to cart</button>
   <div class="clboth"></div>
   <div class="p-2 mt-3">
     <div class="w-100 text-center p-2" style="background-color:#fb97ad">
-      <p id="loading" class="text-white mb-0">Đang tải</p>
+      <p id="loading" class="text-white mb-0">Loading</p>
     </div>
   </div>
 </div>
@@ -95,7 +95,7 @@ Add to cart</button>
             page++;
             checkLoad=false;
           }else{
-            $('#loading').text('Hết');
+            $('#loading').text('Sold');
           }
         });
       }

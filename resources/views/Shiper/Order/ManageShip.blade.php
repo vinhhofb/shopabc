@@ -1,5 +1,5 @@
 @extends("Shiper.Layouts.Master")
-@section('Title', 'Đơn hàng đang nhận')
+@section('Title', 'Orders are being received')
 @section('Content')
 <div class="container-scroller">
   <!-- partial:partials/_navbar.html -->
@@ -24,7 +24,7 @@
                 <div>
                   <div>
                     <div class="bg-white p-4" style="min-height: 300px;">
-                      <p class="font-weight-bold my-3" style="font-size:120%">Đơn hàng đang nhận</p>
+                      <p class="font-weight-bold my-3" style="font-size:120%">Orders are being received</p>
                       @if(isset($getCart->id))
                       <p class="font-weight-bold">My order</p>
                       @php
@@ -78,7 +78,7 @@
                               <div class="clboth"></div>
                               <div class="text-center">
 
-                                <button class="btn btn-light my-3" onclick="orderSuccess()">Hoàn tất đơn hàng</button>
+                                <button class="btn btn-light my-3" onclick="orderSuccess()">Finish</button>
 
                               </div>
                             </div>
@@ -91,7 +91,7 @@
                       @else
                       <div class="pb-5" style="margin:auto;width: 350px;">
                         <img src="../index/images/icons/empty.svg" width="100%">
-                        <p class="text-center font-weight-bold mt-3">Rất tiếc, chưa có đơn hàng</p>
+                        <p class="text-center font-weight-bold mt-3">Sorry, no orders yet</p>
                       </div>
                       @endif
                     </div>
@@ -117,7 +117,7 @@
   <script type="text/javascript">
     function orderSuccess(){
       $.get("{{url('kenh-giao-hang/hoan-tat-don-hang')."/".$getCart->id}}", function(data, status){
-        var ask = window.confirm("Đã hoàn tất đơn hàng, quay về trang nhận đơn?");
+        var ask = window.confirm("Finished, return to the receipt page?");
         if (ask) {
           window.location.href = "{{url('kenh-giao-hang/nhan-don-hang')}}";
         }

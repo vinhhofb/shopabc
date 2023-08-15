@@ -30,7 +30,7 @@
         @empty
         <div class="pb-5" style="margin:auto;width: 350px;">
           <img src="../index/images/icons/empty.svg" width="100%">
-          <p class="text-center font-weight-bold mt-3 text-white">Rất tiếc, No data yet.</p>
+          <p class="text-center font-weight-bold mt-3 text-white">No data yet.</p>
         </div>
         @endforelse
       </div>

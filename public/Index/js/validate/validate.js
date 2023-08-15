@@ -56,7 +56,7 @@ $("#signup-user-form").validate({
             maxlength: "Mật khẩu từ 1 đến 50 ký tự",
         }, 
         re_password: {
-            required: "Vui lòng nhập lại mật khẩu",
+            required: "Vui lòng Re Password",
             maxlength: "Mật khẩu từ 1 đến 50 ký tự",
         }, 
     },
@@ -112,7 +112,7 @@ $("#signup-shiper-form").validate({
             maxlength: "Mật khẩu từ 1 đến 50 ký tự",
         }, 
         re_password: {
-            required: "Vui lòng nhập lại mật khẩu",
+            required: "Vui lòng Re Password",
             maxlength: "Mật khẩu từ 1 đến 50 ký tự",
         }, 
         area:{
@@ -334,8 +334,8 @@ $("#add-mail-config").validate({
         },
         mail_port: {
             required: "Vui lòng nhập Port",
-            max: "Port có giá trị từ 0 đến 100000",
-            min: "Port có giá trị từ 0 đến 100000"
+            max: "Port có Price trị từ 0 đến 100000",
+            min: "Port có Price trị từ 0 đến 100000"
         },
         mail_username: {
             required: "Vui lòng nhập Name đăng nhập",
@@ -812,9 +812,9 @@ $("#add-mail-config").validate({
 //     },
 //     messages: {
 //         ngatbinhluandanhgia: {
-//             required: "Vui lòng nhập số đánh giá Show",
-//             max: "Số đánh giá Show từ 1 đến 255",
-//             min: "Số đánh giá Show từ 1 đến 255",
+//             required: "Vui lòng nhập số Review Show",
+//             max: "Số Review Show từ 1 đến 255",
+//             min: "Số Review Show từ 1 đến 255",
 //             digits: "Vui lòng nhập số nguyên"
 //         },
 //         songuoibaocao: {

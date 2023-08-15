@@ -1,6 +1,6 @@
 <div style="width: 100%;height:100vh;background: #00000054;position: fixed;z-index: 999999;">
     <div class="pt-3" style="width: 80%;height: calc(100vh - 80px);background: white;margin: auto;margin-top: 50px;overflow-y: scroll;">
-        <span class="ml-3 font-weight-bold">Chọn tỉnh thành của bạn</span>
+        <span class="ml-3 font-weight-bold">Choose your province</span>
         <hr/>
         <div class="row m-0 mt-3 px-3" style="">
             @foreach($GetCitys as $GetCity)

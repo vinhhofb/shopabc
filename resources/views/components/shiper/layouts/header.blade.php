@@ -12,12 +12,12 @@
         <div class="float-right d-flex">
             <div class="mr-4" style="height: 35px;">
                 <a href="{{url('/kenh-giao-hang/nhan-don-hang')}}" class="d-flex">
-                    <span class="tx" style="font-size: 80%;margin-top: 6px;">Nhận đơn hàng</span>
+                    <span class="tx" style="font-size: 80%;margin-top: 6px;">Receive purchase order</span>
                 </a>
             </div>
             <div class="mr-4" style="height: 35px;">
                 <a href="{{url('/kenh-giao-hang/thong-tin-tai-khoan')}}" class="d-flex">
-                    <span class="tx" style="font-size: 80%;margin-top: 6px;">Quản lý tài khoản</span>
+                    <span class="tx" style="font-size: 80%;margin-top: 6px;">Account Manage</span>
                 </a>
             </div>
         </div>

@@ -125,16 +125,16 @@ li {
       </div>
       <div class="col-12 col-md-7 pl-4">
         <p class="mb-0" style="font-size:140%">{{$GetProductDetail->name}}</p>
-        <span class="fz95" style="opacity: 0.8;">{{$GetProductReviewCount}} Đánh giá  |  {{$GetProductSellerCount}} đã bán</span>
+        <span class="fz95" style="opacity: 0.8;">{{$GetProductReviewCount}} Review  |  {{$GetProductSellerCount}} đã bán</span>
         <div class="w-100 d-flex p-3 mt-2" style="background:#fafafa">
-          <p class="mr-3 mb-0" style="opacity: 0.8">Giá bán </p><p class="tx mb-0" style="font-size:180%">2.000.000đ</p>
+          <p class="mr-3 mb-0" style="opacity: 0.8">Price bán </p><p class="tx mb-0" style="font-size:180%">2.000.000$</p>
         </div>
         @if(Auth::user())
         <div class="btn bg text-white mt-1 cs w-100 mt-3" style="border-radius: 0" onclick="addToCart({{$GetProductDetail->id}})">
 Add to cart</div>
         @else
         <a href="{{url('dang-nhap')}}">
-          <div class="btn bg text-white mt-1 cs w-100 mt-3" style="border-radius: 0">Login để mua hàng</div>
+          <div class="btn bg text-white mt-1 cs w-100 mt-3" style="border-radius: 0">Login for buy</div>
         </a>
         @endif
       </div>
@@ -145,12 +145,12 @@ Add to cart</div>
 
   </div>
   <div class="bg-white mt-3 p-3">
-    <p class="font-weight-bold mb-3">Information chi tiết</p>
+    <p class="font-weight-bold mb-3">Information</p>
     
     {!! $GetProductDetail->content !!}
   </div>
   <div class="bg-white mt-3 p-3">
-    <p class="font-weight-bold mb-3">Đánh giá Products</p>
+    <p class="font-weight-bold mb-3">Review Products</p>
     @forelse($GetProductReview as $GetProductReview)
     <div>
       <div class="d-flex fz95">
@@ -190,8 +190,8 @@ Add to cart</div>
         <i class="fa fa-star tx" aria-hidden="true"></i>
         @endif
       </div>
-      <p class="mt-2 mb-1" style="opacity: 0.8;font-size: 80%;">Bởi {{$GetProductReview->name}}</p>
-      <p class="mb-1" style="opacity: 0.8;font-size: 80%;">{{\Carbon\Carbon::parse($GetProductReview->created_at)->format('d/m/Y h:i')}} | Phân loại hàng: {{$GetProductReview->type}}</p>
+      <p class="mt-2 mb-1" style="opacity: 0.8;font-size: 80%;">Author {{$GetProductReview->name}}</p>
+      <p class="mb-1" style="opacity: 0.8;font-size: 80%;">{{\Carbon\Carbon::parse($GetProductReview->created_at)->format('d/m/Y h:i')}} | TYpe: {{$GetProductReview->type}}</p>
       <p class="fz95 mb-1">{{$GetProductReview->content}}</p>
       @if($GetProductReview->image != null)
       <div class="d-flex">
@@ -219,7 +219,7 @@ Add to cart</div>
     @empty
     <div class="pb-5" style="margin:auto;width: 350px;">
       <img src="{{ asset("Index/images/icons/empty.svg")}}" width="100%">
-      <p class="text-center font-weight-bold mt-3">Rất tiếc, No data yet</p>
+      <p class="text-center font-weight-bold mt-3">No data yet</p>
     </div>
     @endforelse
 

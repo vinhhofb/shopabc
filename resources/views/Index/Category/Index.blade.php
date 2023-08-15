@@ -1,5 +1,5 @@
 @extends("Index.Layouts.Master")
-@section('Title', 'Danh mục')
+@section('Title', 'Category')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 400px) {
@@ -55,7 +55,7 @@ Add to cart</button>
         @empty
         <div class="pb-5" style="margin:auto;width: 350px;">
           <img src="../index/images/icons/empty.svg" width="100%">
-          <p class="text-center font-weight-bold mt-3">Rất tiếc, chúng tôi không tìm thấy kết quả</p>
+          <p class="text-center font-weight-bold mt-3">Sorry, we couldn't find any results</p>
         </div>
         @endforelse
       </div>

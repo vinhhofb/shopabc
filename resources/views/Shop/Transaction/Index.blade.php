@@ -34,13 +34,13 @@
                                       Code
                                     </th>
                                     <th>
-                                      Type giao dịch
+                                      Type
                                     </th>
                                     <th>
                                       Status
                                     </th>
                                     <th>
-                                      Ngày giao dịch
+                                      Date
                                     </th>
                                     <th>
                                       Method
@@ -53,7 +53,7 @@
                                       #1
                                     </td>
                                     <td>
-                                      Payment hàng
+                                      Payment 
                                     </td>
                                     <td>
                                      <div class="badge badge-warning badge-pill my-auto mx-2">Success</div>
@@ -62,7 +62,7 @@
                                       17/07/2022 12:30
                                     </td>
                                     <td class="d-flex">
-                                      <div class="btn bg text-white">Hỗ trợ</div>
+                                      <div class="btn bg text-white">Support</div>
                                     </td>
                                   </tr>
                                   <tr>
@@ -70,7 +70,7 @@
                                       #1
                                     </td>
                                     <td>
-                                      Payment hàng
+                                      Payment 
                                     </td>
                                     <td>
                                      <div class="badge badge-info badge-pill my-auto mx-2">Success</div>
@@ -79,7 +79,7 @@
                                       17/07/2022 12:30
                                     </td>
                                     <td class="d-flex">
-                                      <div class="btn bg text-white">Hỗ trợ</div>
+                                      <div class="btn bg text-white">Support</div>
                                     </td>
                                   </tr>
                                   <tr>
@@ -87,7 +87,7 @@
                                       #1
                                     </td>
                                     <td>
-                                      Payment hàng
+                                      Payment 
                                     </td>
                                     <td>
                                      <div class="badge badge-success badge-pill my-auto mx-2">Success</div>
@@ -96,7 +96,7 @@
                                       17/07/2022 12:30
                                     </td>
                                     <td class="d-flex">
-                                      <div class="btn bg text-white">Hỗ trợ</div>
+                                      <div class="btn bg text-white">Support</div>
                                     </td>
                                   </tr>
                                   <tr>
@@ -104,7 +104,7 @@
                                       #1
                                     </td>
                                     <td>
-                                      Payment hàng
+                                      Payment 
                                     </td>
                                     <td>
                                      <div class="badge badge-danger badge-pill my-auto mx-2">Success</div>
@@ -113,7 +113,7 @@
                                       17/07/2022 12:30
                                     </td>
                                     <td class="d-flex">
-                                      <div class="btn bg text-white">Hỗ trợ</div>
+                                      <div class="btn bg text-white">Support</div>
                                     </td>
                                   </tr>
                                   

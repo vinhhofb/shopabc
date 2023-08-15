@@ -1,5 +1,5 @@
 @extends("Shiper.Layouts.Master")
-@section('Title', 'Rút tiền')
+@section('Title', 'Withdraw')
 @section('Content')
 <div class="container-scroller">
   <x-shiper.layouts.header-dashboard/>
@@ -20,7 +20,7 @@
                     <form action="{{url('kenh-giao-hang/rut-tien')}}" id="create_form" method="post">
                       @csrf  
                       <div class="bg-white p-3">
-                        <p class="font-weight-bold my-3" style="font-size:120%">Rút tiền</p> 
+                        <p class="font-weight-bold my-3" style="font-size:120%">Withdraw</p> 
                         <div class="row m-0">
                           <div class="col-3 p-0 pr-2 mb-2 pr-3">
                             <div class="bg text-white p-2">
@@ -30,7 +30,7 @@
                             </div>
                           </div>
                           <div class="col-6 p-0 pr-2 mb-2">
-                            <label class="fz95">Nhập số tiền cần rút</label>
+                            <label class="fz95">Enter the amount to withdraw</label>
                             <div class="d-flex">
                               <input type="number" name="amount" min="50000" max="{{Auth::user()->balance}}" class="form-control mr-2" required>
                               <button class="btn bg text-white" style="width: 30%;">OK</button>

@@ -29,24 +29,23 @@
                         </div>
                         <div class="col-md-6 px-3">
                           <div class="form-group">
-                            <label>Giá</label>
-                            <input type="number" class="form-control"  placeholder="giá" name="price" required>
+                            <label>Price</label>
+                            <input type="number" class="form-control"  placeholder="Price" name="price" required>
                           </div>
                         </div>
                         <div class="col-md-6 pr-1 pl-3">
                           <div class="form-group">
-                            <label>Đơn vị</label>
+                            <label>Unit</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="unit" required>
                               <option value="kg">kg</option>
-                              <option value="cái">cái</option>
-                              <option value="thùng">thùng</option>
+                              <option value="per">per</option>
                               <option value="Products">Products</option>
                             </select>
                           </div>
                         </div>
                         <div class="col-md-6 pr-1 pl-3">
                           <div class="form-group">
-                            <label>Danh mục</label>
+                            <label>Category</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="category" required>
                               @foreach($GetCategory as $GetCategory)
                               <option value="{{$GetCategory->id}}">{{$GetCategory->name}}</option>
@@ -99,7 +98,6 @@
     tinymce.init({
       selector: '.mytextarea',
       height: 430,
-      language: 'vi_VN',
       plugins: [
       'a11ychecker advcode advlist anchor autolink codesample fullscreen help image imagetools tinydrive',
       ' lists link media noneditable powerpaste preview',

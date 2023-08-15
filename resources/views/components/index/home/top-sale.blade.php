@@ -1,5 +1,5 @@
 <div class="mt-3 p-2" style="width: 100%;background: white;border-radius: 8px;">
-  <p class="font-weight-bold" style="font-size: 95%">Nhóm hàng thường mua</p>
+  <p class="font-weight-bold" style="font-size: 95%">Best seller</p>
   <div class="row d-flex mx-0" style="margin-top:-20px">
     
     @foreach($GetTopSales as $GetTopSales)

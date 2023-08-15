@@ -76,7 +76,7 @@
                             <p class="mb-0 mt-2 font-weight-bold" style="color:black">Shiper 1</p>
                             <p class="tx">0799438990</p>
                             <a href="{{url('tro-chuyen')."/".$getCart->shiper_id}}">
-                              <button class="btn text-white bg"><i class="fa fa-comment mr-2" aria-hidden="true"></i>Trò chuyện ngay</button>
+                              <button class="btn text-white bg"><i class="fa fa-comment mr-2" aria-hidden="true"></i>CHat ngay</button>
                             </a>
                           </div>
                         </div>

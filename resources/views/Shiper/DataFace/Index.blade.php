@@ -1,5 +1,5 @@
 @extends("Shiper.Layouts.Master")
-@section('Title', 'Dữ liệu nhận diện')
+@section('Title', 'Data Face')
 @section('Content')
 <div class="container-scroller">
   <x-shiper.layouts.header-dashboard/>

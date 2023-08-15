@@ -52,9 +52,9 @@
                                 <td>{{$getPayment->name}}</td>
                                 <td>
                                   @if($getPayment->type == 0)
-                                  <span class="text-danger">Trừ tài khoản</span>
+                                  <span class="text-danger">Except for the account</span>
                                   @elseif($getPayment->type == 1)
-                                  <span class="text-success">Cộng tài khoản</span>
+                                  <span class="text-success">Add account</span>
                                   @endif
                                 </td>
                                 <td>{{number_format($getPayment->value)}}đ</td>

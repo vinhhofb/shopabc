@@ -1,5 +1,5 @@
 @extends("Shiper.Layouts.Master")
-@section('Title', 'Đăng ký gương mặt')
+@section('Title', 'Signup gương mặt')
 @section('Content')
 @include('Shiper.Layouts.Header')
 <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -10,7 +10,7 @@
     <video id="player" controls autoplay width="640px" height="480px">
     </video>
     <button id="capture" class="d-none">sj</button>
-    <p id="status" class="fz95 tx mt-2 text-center">Đang tải</p>
+    <p id="status" class="fz95 tx mt-2 text-center">Loading</p>
   </div>
   
   

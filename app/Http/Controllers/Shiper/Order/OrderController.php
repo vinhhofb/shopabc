@@ -131,7 +131,7 @@ class OrderController extends Controller
 
         DB::table('payment')->insert(
             [
-                'name' => 'Rút tiền',
+                'name' => 'Withdraw',
                 'type'=>2,
                 'status'=>0,
                 'value'=>$request->amount,

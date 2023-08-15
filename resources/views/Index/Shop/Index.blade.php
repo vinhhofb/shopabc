@@ -52,7 +52,7 @@ Add to cart</button>
         @empty
         <div class="pb-5" style="margin:auto;width: 350px;">
           <img src="../index/images/icons/empty.svg" width="100%">
-          <p class="text-center font-weight-bold mt-3">Rất tiếc, chúng tôi không tìm thấy kết quả</p>
+          <p class="text-center font-weight-bold mt-3">Sorry, we couldn't find any results</p>
         </div>
         @endforelse
       </div>
@@ -83,7 +83,7 @@ Add to cart</button>
 
   <script>
     @if(count($errors) > 0)
-    toastr.error("Vui lòng kiểm tra các trường");
+    toastr.error("Please check the fields");
     @endif
   </script>
 

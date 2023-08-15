@@ -1,5 +1,5 @@
 @extends("Customer.Layouts.Master")
-@section('Title', 'Hỗ trợ kỹ thuật')
+@section('Title', 'Support kỹ thuật')
 @section('Content')
 <div class="container-scroller">
   <!-- partial:partials/_navbar.html -->
@@ -35,7 +35,7 @@
                       </div>
                       <div class="w-100 mt-3">
                         <div class="bg text-white p-3" style="width: 80%;">
-                          <p>Hello Vinh Huu Ho👋, mình là CLEO - CHATBOT hỗ trợ thông minh dành riêng cho bạn. CLEO có thể ngay lập tức hỗ trợ hoặc giúp bạn kết nối tới Chuyên viên tư vấn. Bạn có thể chọn 1 trong các chủ đề bên dưới, hoặc nhắn câu hỏi ngắn gọn, dễ hiểu giúp CLEO nhé 💜</p>
+                          <p>Hello Vinh Huu Ho👋, mình là CLEO - CHATBOT Support thông minh dành riêng cho bạn. CLEO có thể ngay lập tức Support hoặc giúp bạn kết nối tới Chuyên viên tư vấn. Bạn có thể chọn 1 trong các chủ đề bên dưới, hoặc nhắn câu hỏi ngắn gọn, dễ hiểu giúp CLEO nhé 💜</p>
                         </div>
                       </div>
                     </div>

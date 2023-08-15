@@ -48,9 +48,9 @@
                                 <td>{{$getPayment->name}}</td>
                                 <td>
                                   @if($getPayment->type == 2)
-                                  <span class="text-danger">Trừ tài khoản</span>
+                                  <span class="text-danger">Except for the account</span>
                                   @elseif($getPayment->type == 3)
-                                  <span class="text-success">Cộng tài khoản</span>
+                                  <span class="text-success">Add account</span>
                                   @endif
                                 </td>
                                 <td>{{number_format($getPayment->value)}}đ</td>
@@ -59,7 +59,7 @@
                                   @if($getPayment->status == 0)
                                   <span class="text-warning">Pending</span>
                                   @elseif($getPayment->status == 1)
-                                  <span class="text-success">Đã chuyển khoản</span>
+                                  <span class="text-success">Success</span>
                                   @endif
                                   @else
                                   <span class="text-success">Success</span>
