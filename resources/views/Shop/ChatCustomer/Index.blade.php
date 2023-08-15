@@ -1,0 +1,76 @@
+@extends("Shop.Layouts.Master")
+@section('Title', 'Tư vấn khách hàng')
+@section('Content')
+<div class="container-scroller">
+  <x-shop.layouts.header-dashboard/>
+  <div class="container-fluid page-body-wrapper">
+    <div class="theme-setting-wrapper">
+    </div>
+    <div class="side-bar-box" style="width: 250px;">
+      <x-shop.layouts.side-bar/>
+    </div>
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-md-12 grid-margin">
+            <div class="row">
+              <div class="col-12 col-xl-12 mb-4 mb-xl-0">
+                <div>
+                  <div>
+                   
+                     <div class="bg-white p-3">
+                      <p class="font-weight-bold" style="font-size:120%">Tư vấn khách hàng</p>
+                      <iframe src="http://marketonline2.com/chatify" style="height:500px;width: 100%;border:0;"></iframe>
+                      
+                    </div>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+</div>
+@endsection
+
+
+
+{{-- @extends("Shop.Layouts.Master")
+@section('Title', 'Đổi mật khẩu')
+@section('Content')
+<div class="container d-flex" style="padding-top: 60px;">
+ <x-shop.layouts.side-bar/>
+ <div class="px-3" style="width: calc(100% - 210px);">
+  <div class="bg-white p-3" style="border-radius: 8px;">
+    <p class="font-weight-bold">Đổi mật khẩu</p>
+    <form method="post" action="{{url('kenh-cua-hang/doi-mat-khau')}}">
+      @csrf
+      <div class="row m-0">
+        <div class="col-6 p-0 pr-2 mb-2">
+          <label class="fz95">Mật khẩu hiện tại</label>
+          <input type="text" name="passwordNow" class="form-control mr-2" required>
+        </div>
+        <div class="col-6 p-0 pl-2 mb-2">
+          <label class="fz95">Mật khẩu mới</label>
+          <input type="text" name="passwordNew" class="form-control mr-2" required>
+        </div>
+        <div class="col-6 p-0 pr-2 mb-2">
+          <label class="fz95">Nhập lại mật khẩu mới</label>
+          <input type="text" name="passwordNewRe" class="form-control mr-2" required>
+        </div>  
+        <div class="col-12 p-0  text-center">
+            @if (\Session::has('msg'))
+            <span class="text-success mt-2">{!! \Session::get('msg') !!}</span>
+            @endif
+        </div>
+        <div class="col-12 p-0 pr-2 mb-2 text-center mt-3">
+          <button class="btn bg text-white">Đổi mật khẩu</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+@endsection --}}
