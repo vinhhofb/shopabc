@@ -1,5 +1,5 @@
 @extends("Shop.Layouts.Master")
-@section('Title', 'Đăng nhập cửa hàng')
+@section('Title', 'Login cửa hàng')
 @section('Content')
 
 <link rel="stylesheet" href="{{ asset('index/css/reponsive.css') }}">
@@ -8,20 +8,20 @@
   <div class="form-login-box bg-white mt-5 p-3" style="width: 30%;margin: auto;">
     <form id="login-user-form" action="{{url('kenh-cua-hang/dang-nhap')}}" method="post">
       @csrf
-      <p class="text-center font-weight-bold mt-1 tx" style="font-size: 110%">ĐĂNG NHẬP CỬA HÀNG</p>
+      <p class="text-center font-weight-bold mt-1 tx" style="font-size: 110%">LOGIN CỬA HÀNG</p>
       <hr>
-      <p class="fz95 mt-2 mb-1">Nhập số điện thoại</p>
+      <p class="fz95 mt-2 mb-1">Your phone</p>
       <input type="number" name="phone" class="form-control w-100">
-      <p class="fz95 mt-2 mx-1">Nhập mật khẩu</p>
+      <p class="fz95 mt-2 mx-1">Password</p>
       <input type="password" name="password" class="form-control w-100">
-      <p class="float-right fz95 mt-2 tx cs">Quên mật khẩu</p>
-      <button type="submit" class="btn bg w-100 text-white cs">Đăng nhập</button>
+      <p class="float-right fz95 mt-2 tx cs">Forget password</p>
+      <button type="submit" class="btn bg w-100 text-white cs">Login</button>
       @if (\Session::has('msg'))
       <p class="text-danger mt-2 text-center mb-0 fz-95">{!! \Session::get('msg') !!}</p>
       @endif
-      <p class="fz95 text-center mt-3">Bạn chưa có tài khoản, Đăng ký
+      <p class="fz95 text-center mt-3">You do not have an account, Sign up
         <a href="{{url('kenh-cua-hang/dang-ky')}}">
-         <span class="tx cs">Tại đây</span>
+         <span class="tx cs">Here</span>
        </a>
      </p>
    </form>

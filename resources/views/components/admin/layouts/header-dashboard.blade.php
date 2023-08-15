@@ -19,7 +19,7 @@
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
           <a class="dropdown-item" href="{{url('admin/dang-xuat')}}">
             <i class="ti-power-off text-primary"></i>
-           Đăng xuất
+           Logout
           </a>
         </div>
       </li>

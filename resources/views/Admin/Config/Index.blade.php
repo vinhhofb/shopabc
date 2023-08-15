@@ -22,7 +22,7 @@
                       @csrf
                       <div class="row m-0">
                         <div class="col-6 p-0 pr-2 mb-2">
-                          <label class="fz95">Thuế VAT(%)</label>
+                          <label class="fz95">TAX(%)</label>
                           <input type="text" name="vat" class="form-control mr-2" value="{{$config[0]->value}}" required>
                         </div>
                         {{-- <div class="col-6 p-0 pl-2 mb-2">

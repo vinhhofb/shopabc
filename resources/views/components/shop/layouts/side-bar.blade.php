@@ -14,8 +14,8 @@
       </a>
       <div class="collapse" id="tables">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="{{url('kenh-cua-hang/thong-tin-tai-khoan')}}">Thông tin tài khoản</a></li>
-          <li class="nav-item"> <a class="nav-link" href="{{url('kenh-cua-hang/doi-mat-khau')}}">Đổi mật khẩu</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{{url('kenh-cua-hang/thong-tin-tai-khoan')}}">Basic information</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{{url('kenh-cua-hang/doi-mat-khau')}}">Change Password</a></li>
         </ul>
       </div>
     </li>

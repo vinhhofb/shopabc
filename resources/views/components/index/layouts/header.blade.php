@@ -100,32 +100,32 @@
             </div>
             <form id="search-form" class="d-flex" method="get" action="{{url('tim-kiem')}}">
                 <div class="mr-2 search-box d-flex bg-white" style="width: 400px;height: 35px;">
-                    <input id="search-input" class="form-control" type="text" name="keyword" style="width: 100%;height: 100%;border-radius: 0;border: 0;box-shadow: none !important;" placeholder="Bạn đang tìm gì?" required autocomplete="off">
+                    <input id="search-input" class="form-control" type="text" name="keyword" style="width: 100%;height: 100%;border-radius: 0;border: 0;box-shadow: none !important;" placeholder="What are you looking for?" required autocomplete="off">
                     <span class="microphone mt-2" style="width: 20px;">
                         <i class="fas fa-microphone"></i>
                         <span class="recording-icon"></span>
                     </span>
                 </div>
                 <div class="mr-4 search-button" style="width: 80px;">
-                    <button class="btn" style="font-size: 80%;width: 100%;height: 100%; background: white;border-radius: 0;">Tìm kiếm</button>
+                    <button class="btn" style="font-size: 80%;width: 100%;height: 100%; background: white;border-radius: 0;">Search</button>
                 </div>
             </form>
             <div class="mr-4 cs order-box" style="width: 70px;height: 35px;">
                 <a href="{{url('don-hang')}}">
-                    <p class="text-white" style="font-size: 80%">Đơn hàng của bạn</p>
+                    <p class="text-white mt-2" style="font-size: 80%">My order</p>
                 </a>
             </div>
 
             @if(Auth::user())
             <div class="mr-4 pt-2 text-center cs cart-box" style="width: 120px;height: 35px;background: #d3012e">
                 <a href="{{route('index.cart.index')}}">
-                    <p class="text-white" style="font-size: 80%"><i class="fa fa-shopping-basket mr-2" aria-hidden="true"></i> Giỏ hàng</p>
+                    <p class="text-white" style="font-size: 80%"><i class="fa fa-shopping-basket mr-2" aria-hidden="true"></i> Cart</p>
                 </a>
             </div>
             @else
             <div class="mr-4 pt-2 text-center login-box" style="width: 120px;height: 35px;background: #d3012e">
                 <a href="{{route('index.login.index')}}">
-                    <p class="text-white" style="font-size: 80%"><i class="fa fa-sign-in mr-2" aria-hidden="true"></i>Đăng nhập</p>
+                    <p class="text-white" style="font-size: 80%"><i class="fa fa-sign-in mr-2" aria-hidden="true"></i>Login</p>
                 </a>
             </div>
             @endif

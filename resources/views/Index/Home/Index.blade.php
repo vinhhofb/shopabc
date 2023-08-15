@@ -1,5 +1,5 @@
 @extends("Index.Layouts.Master")
-@section('Title', 'Trang chủ')
+@section('Title', 'Home')
 @section('Content')
 @if(Session::get('id_city') == null)
 <x-index.home.choose-city/>

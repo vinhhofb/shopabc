@@ -86,7 +86,7 @@ li {
 
   <div class="" style="width: 100%">
     <div class="bg-white pl-2 pt-2" style="background:#fff;width: 100%;">
-     <span class="fz95" style="line-height:35px;opacity: 0.8;line-height: 20px">Trang chủ / {{$getCategory->name}} / {{$GetProductDetail->name}}</span>
+     <span class="fz95" style="line-height:35px;opacity: 0.8;line-height: 20px">Home / {{$getCategory->name}} / {{$GetProductDetail->name}}</span>
    </div>
    <div class="p-2 bg-white w-100">
 
@@ -130,10 +130,11 @@ li {
           <p class="mr-3 mb-0" style="opacity: 0.8">Giá bán </p><p class="tx mb-0" style="font-size:180%">2.000.000đ</p>
         </div>
         @if(Auth::user())
-        <div class="btn bg text-white mt-1 cs w-100 mt-3" style="border-radius: 0" onclick="addToCart({{$GetProductDetail->id}})">Thêm vào giỏ hàng</div>
+        <div class="btn bg text-white mt-1 cs w-100 mt-3" style="border-radius: 0" onclick="addToCart({{$GetProductDetail->id}})">
+Add to cart</div>
         @else
         <a href="{{url('dang-nhap')}}">
-          <div class="btn bg text-white mt-1 cs w-100 mt-3" style="border-radius: 0">Đăng nhập để mua hàng</div>
+          <div class="btn bg text-white mt-1 cs w-100 mt-3" style="border-radius: 0">Login để mua hàng</div>
         </a>
         @endif
       </div>

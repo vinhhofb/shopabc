@@ -27,7 +27,7 @@
                         $total=0;
                         @endphp
                         @forelse($getCart as $getCart)
-                        <p>Mã đơn hàng #{{$getCart->id}} - Ngày lên đơn  {{\Carbon\Carbon::parse($getCart->created_at)->setTimezone('Asia/Ho_Chi_Minh')->format('d/m/Y h:i:s')}}</p>
+                        <p>Code #{{$getCart->id}} - Created  {{\Carbon\Carbon::parse($getCart->created_at)->setTimezone('Asia/Ho_Chi_Minh')->format('d/m/Y h:i:s')}}</p>
                        
                         <div class="row m-0">
                           <div class="col-9">
@@ -50,7 +50,7 @@
                                     </div>
                                   </td>
                                   <td class="fz95 pt-4" width="25%">{{$getProductsCart2->name}}</td>
-                                  <td width="18%" class="pt-4">{{number_format($getProductsCart2->price)}}đ</td>
+                                  <td width="18%" class="pt-4">{{number_format($getProductsCart2->price)}}$</td>
 
                                   <td width="12%" class="pt-4">{{number_format($getProductsCart2->quanlity)}}</td>
 
@@ -68,12 +68,12 @@
                           </div>
                           <div class="col-3 p-0">
                             <div class="bg text-white p-2" style="border-radius: 8px;">
-                              <p class="font-weight-bold mb-1">Thông tin đơn hàng</p>
+                              <p class="font-weight-bold mb-1">Order Information</p>
                               <div>
-                                <p class="fz95 float-left font-weight-bold mb-1">Phí giao hàng</p>
+                                <p class="fz95 float-left font-weight-bold mb-1">Fee ship</p>
                                 <p class="fz95 float-right mb-1">{{number_format($getCart->fee)}}đ</p>
                                 <div class="clboth"></div>
-                                <p class="fz95 float-left font-weight-bold mb-1">Tổng thanh toán</p>
+                                <p class="fz95 float-left font-weight-bold mb-1">Total</p>
                                 <p class="fz95 float-right mb-1">{{number_format($getCart->total+$getCart->fee)}}đ</p>
                                 <div class="clboth"></div>
                                 <div class="text-center">

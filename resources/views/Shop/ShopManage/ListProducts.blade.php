@@ -46,7 +46,7 @@
                               <thead>
                                 <tr>
                                   <th>
-                                    Mã
+                                    Code
                                   </th>
                                   <th width="300px">
                                     Tên sản phẩm
@@ -58,7 +58,7 @@
                                     Thông tin
                                   </th>
                                   <th>
-                                    Trạng thái
+                                    Status
                                   </th>
                                   <th>
                                     Thao tác
@@ -84,7 +84,7 @@
                                   <td width="20%">
                                     <p>{{number_format($GetProductByShop->price)}}đ / {{$GetProductByShop->unit}}</p>
                                     <p class="mt-2">Số lượng: {{$GetProductByShop->quanlity}}</p>
-                                    <p class="mt-2">Đã bán: {{$GetProductByShop->count_sale}}</p>
+                                    <p class="mt-2">Selled: {{$GetProductByShop->count_sale}}</p>
                                     
                                   </td>
                                   <td width="15%">

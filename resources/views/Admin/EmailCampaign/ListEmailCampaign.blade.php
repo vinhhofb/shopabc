@@ -45,8 +45,8 @@
                               <th>Tên</th>
                               <th>Mẫu mail</th>
                               <th>Tiến trình</th>
-                              <th>Loại</th>
-                              <th>Ngày tạo</th>
+                              <th>Type</th>
+                              <th>Created</th>
                               <th>Thao tác</th>
 
                             </thead>

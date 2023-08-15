@@ -65,7 +65,7 @@ class AccountController extends Controller
         $phone =  $request->phone;
         $user = User::where('phone', '=', $phone)->first();
         if(isset($user)){
-            return redirect()->back()->with('msg', 'Số điện thoại đã tồn tại');
+            return redirect()->back()->with('msg', 'Phone đã tồn tại');
         }else{
             $user = new User();
             $user->phone = $request['phone'];

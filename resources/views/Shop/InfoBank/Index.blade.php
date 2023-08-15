@@ -1,5 +1,5 @@
 @extends("Shop.Layouts.Master")
-@section('Title', 'Thông tin thanh toán')
+@section('Title', 'Billing Information')
 @section('Content')
 <div class="container-scroller">
   <x-shop.layouts.header-dashboard/>
@@ -20,18 +20,18 @@
                     <form  method="post" action="{{url('kenh-cua-hang/doi-mat-khau')}}">
                      @csrf
                      <div class="bg-white p-3">
-                      <p class="font-weight-bold" style="font-size:120%">Thông tin thanh toán</p>
+                      <p class="font-weight-bold" style="font-size:120%">Billing Information</p>
                       <div class="row m-0">
                         <div class="col-12 col-md-6 p-0 pr-2 mb-2">
-                          <label class="fz95">Mật khẩu hiện tại</label>
+                          <label class="fz95">Password Now</label>
                           <input type="text" name="passwordNow" class="form-control mr-2" required>
                         </div>
                         <div class="col-12 col-md-6 p-0 pl-2 mb-2">
-                          <label class="fz95">Mật khẩu mới</label>
+                          <label class="fz95">Password New</label>
                           <input type="text" name="passwordNew" class="form-control mr-2" required>
                         </div>
                         <div class="col-12 col-md-6 p-0 pr-2 mb-2">
-                          <label class="fz95">Nhập lại mật khẩu mới</label>
+                          <label class="fz95">Repassword</label>
                           <input type="text" name="passwordNewRe" class="form-control mr-2" required>
                         </div>  
                         <div class="col-12 p-0  text-center">
@@ -40,7 +40,7 @@
                           @endif
                         </div>
                         <div class="col-12 p-0 pr-2 mb-2 text-center mt-3">
-                          <button class="btn bg text-white">Đổi mật khẩu</button>
+                          <button class="btn bg text-white">Change Password</button>
                         </div>
                       </div>
                       
@@ -61,26 +61,26 @@
 
 
 {{-- @extends("Shop.Layouts.Master")
-@section('Title', 'Đổi mật khẩu')
+@section('Title', 'Change Password')
 @section('Content')
 <div class="container d-flex" style="padding-top: 60px;">
  <x-shop.layouts.side-bar/>
  <div class="px-3" style="width: calc(100% - 210px);">
   <div class="bg-white p-3" style="border-radius: 8px;">
-    <p class="font-weight-bold">Đổi mật khẩu</p>
+    <p class="font-weight-bold">Change Password</p>
     <form method="post" action="{{url('kenh-cua-hang/doi-mat-khau')}}">
       @csrf
       <div class="row m-0">
         <div class="col-6 p-0 pr-2 mb-2">
-          <label class="fz95">Mật khẩu hiện tại</label>
+          <label class="fz95">Password Now</label>
           <input type="text" name="passwordNow" class="form-control mr-2" required>
         </div>
         <div class="col-6 p-0 pl-2 mb-2">
-          <label class="fz95">Mật khẩu mới</label>
+          <label class="fz95">Password New</label>
           <input type="text" name="passwordNew" class="form-control mr-2" required>
         </div>
         <div class="col-6 p-0 pr-2 mb-2">
-          <label class="fz95">Nhập lại mật khẩu mới</label>
+          <label class="fz95">Repassword</label>
           <input type="text" name="passwordNewRe" class="form-control mr-2" required>
         </div>  
         <div class="col-12 p-0  text-center">
@@ -89,7 +89,7 @@
             @endif
         </div>
         <div class="col-12 p-0 pr-2 mb-2 text-center mt-3">
-          <button class="btn bg text-white">Đổi mật khẩu</button>
+          <button class="btn bg text-white">Change Password</button>
         </div>
       </div>
     </form>

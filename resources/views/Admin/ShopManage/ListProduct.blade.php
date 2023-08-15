@@ -37,7 +37,7 @@
                               <th>Hình đại diện</th>
                               <th width="30%">Tên sản phẩm</th>
                               <th>Giá tiền</th>
-                              <th>Trạng thái</th>
+                              <th>Status</th>
                               <th>Thao tác</th>
                             </thead>
                             <tbody>

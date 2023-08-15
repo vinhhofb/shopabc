@@ -37,7 +37,7 @@
                               <th>ID</th>
                               <th>Hình đại diện</th>
                               <th>Tên cửa hàng</th>
-                              <th>Trạng thái</th>
+                              <th>Status</th>
                               <th>Thao tác</th>
                             </thead>
                             <tbody>

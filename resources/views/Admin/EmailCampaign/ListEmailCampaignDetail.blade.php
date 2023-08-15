@@ -39,7 +39,7 @@
                                 <th>ID</th>
                                 <th>Email gửi</th>
                                 <th>Email nhận</th>
-                                <th>Trạng thái</th>
+                                <th>Status</th>
                                 <th>Ngày gửi</th>
 
                               </thead>

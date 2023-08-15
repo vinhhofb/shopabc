@@ -42,9 +42,9 @@
                           <table class="table table-hover table-striped">
                             <thead>
                               <th>ID</th>
-                              <th width="45%">Tiêu đề email</th>
+                              <th width="45%">Title email</th>
                               
-                              <th>Loại</th>
+                              <th>Type</th>
                               <th>Thao tác</th>
                             </thead>
                             <tbody>

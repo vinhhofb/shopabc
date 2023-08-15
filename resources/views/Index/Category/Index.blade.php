@@ -36,14 +36,16 @@
               <a href="{{url('chi-tiet-san-pham')."/".$item->id."/".$item->slug}}" style="color: black !important;">
                 <p class="fz95  mt-2 mb-0 hide-scroll" style="height: 45px;overflow-y:hidden;">{{$item->name}}</p>
               </a>
-              <p class="float-left mb-0" style="font-size:80%;margin-top: 6px;opacity: 0.8;">Đã bán: {{$item->count_sale}}</p>  
-              <p class="tx ml-2 font-weight-bold float-right my-1">{{number_format($item->price)}}đ</p>
+              <p class="float-left mb-0" style="font-size:80%;margin-top: 6px;opacity: 0.8;">Selled: {{$item->count_sale}}</p>  
+              <p class="tx ml-2 font-weight-bold float-right my-1">{{number_format($item->price)}}$</p>
               <div class="clboth"></div>
               @if(isset(Auth::user()->id))
-              <button class=" w-100 bg fz95 btn text-white" onclick="addToCart({{$item->id}})"  style="border-radius: 0;">Thêm vào giỏ hàng</button>
+              <button class=" w-100 bg fz95 btn text-white" onclick="addToCart({{$item->id}})"  style="border-radius: 0;">
+Add to cart</button>
               @else
               <a href="{{url('dang-nhap')}}">
-                <button class="w-100 bg btn text-white"  style="border-radius: 0;">Thêm vào giỏ hàng</button>
+                <button class="w-100 bg btn text-white"  style="border-radius: 0;">
+Add to cart</button>
               </a>
               @endif
             </div>

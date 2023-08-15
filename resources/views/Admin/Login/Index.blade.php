@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Đăng nhập Admin')
+@section('Title', 'Login Admin')
 @section('Content')
 
 <link rel="stylesheet" href="{{ asset('index/css/reponsive.css') }}">
@@ -8,13 +8,13 @@
   <div class="form-login-box bg-white mt-4 p-3" style="width: 30%;margin: auto;">
     <form id="login-admin-form" action="{{url('admin/dang-nhap')}}" method="post">
       @csrf
-      <p class="text-center font-weight-bold mt-1 tx" style="font-size: 110%">ĐĂNG NHẬP ADMIN</p>
+      <p class="text-center font-weight-bold mt-1 tx" style="font-size: 110%">LOGIN ADMIN</p>
       <hr>
       <p class="fz95 mb-0">Tên tài khoản</p>
       <input type="text" name="name" class="form-control w-100" required>
-      <p class="fz95 mt-2 mb-0">Nhập mật khẩu</pl>
+      <p class="fz95 mt-2 mb-0">Password</pl>
       <input type="password" name="password" class="form-control w-100" required>
-      <button type="submit" class="btn bg w-100 text-white cs mt-4">Đăng nhập</button>
+      <button type="submit" class="btn bg w-100 text-white cs mt-4">Login</button>
       @if (\Session::has('msg'))
       <p class="text-danger mt-2 text-center mb-0 fz-95">{!! \Session::get('msg') !!}</p>
       @endif

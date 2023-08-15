@@ -19,11 +19,11 @@ class DepositController extends Controller
     public function PostDeposit(Request $request){
         session(['cost_id' => $request->id]);
         session(['url_prev' => url()->previous()]);
-        $vnp_TmnCode = "UDOPNWS1"; //Mã website tại VNPAY 
+        $vnp_TmnCode = "UDOPNWS1"; //Code website tại VNPAY 
         $vnp_HashSecret = "EBAHADUGCOEWYXCMYZRMTMLSHGKNRPBN"; //Chuỗi bí mật
         $vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
         $vnp_Returnurl = "http://marketonline2.com/vnpay/return";
-        $vnp_TxnRef = date("YmdHis")."-".Auth::user()->id; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
+        $vnp_TxnRef = date("YmdHis")."-".Auth::user()->id; //Code. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
         $vnp_OrderInfo = "Thanh toán hóa đơn phí dich vụ";
         $vnp_OrderType = 'billpayment';
         $vnp_Amount = $request->input('amount') * 100;
@@ -80,7 +80,7 @@ class DepositController extends Controller
 
         DB::table('payment')->insert(
             [
-                'name' => 'Nạp tiền',
+                'name' => 'Deposit',
                 'type'=>1,
                 'status'=>0,
                 'value'=>$request->vnp_Amount/100,

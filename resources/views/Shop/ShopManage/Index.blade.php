@@ -49,7 +49,7 @@
                                   <th width="15%">Hình đại diện</th>
                                   <th>Tên cửa hàng</th>
 
-                                  <th width="18%">Trạng thái</th>
+                                  <th width="18%">Status</th>
 
                                   <th width="25%">Thao tác</th>
                                 </tr>

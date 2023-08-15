@@ -37,14 +37,16 @@
             <p class="fz95 hide-scroll mt-2 mb-0" style="height: 45px;overflow-y:hidden;">{{$GetProductRelate->name}}</p>
           </a>
           
-          <p class="float-left mb-0" style="font-size:80%;margin-top: 6px;opacity: 0.8;">Đã bán: {{$GetProductRelate->count_sale}}</p>  
-          <p class="tx ml-2 font-weight-bold float-right my-1">{{number_format($GetProductRelate->price)}}đ</p>
+          <p class="float-left mb-0" style="font-size:80%;margin-top: 6px;opacity: 0.8;">Selled: {{$GetProductRelate->count_sale}}</p>  
+          <p class="tx ml-2 font-weight-bold float-right my-1">{{number_format($GetProductRelate->price)}}$</p>
           <div class="clboth"></div>
           @if(isset(Auth::user()->id))
-          <button class="add-to-cart-button w-100 bg fz95 btn text-white" onclick="addToCart({{$GetProductRelate->id}})"  style="border-radius: 0;">Thêm vào giỏ hàng</button>
+          <button class="add-to-cart-button w-100 bg fz95 btn text-white" onclick="addToCart({{$GetProductRelate->id}})"  style="border-radius: 0;">
+Add to cart</button>
           @else
           <a href="{{url('dang-nhap')}}">
-            <button class="add-to-cart-button w-100 bg btn text-white"  style="border-radius: 0;">Thêm vào giỏ hàng</button>
+            <button class="add-to-cart-button w-100 bg btn text-white"  style="border-radius: 0;">
+Add to cart</button>
           </a>
           @endif
         </div>

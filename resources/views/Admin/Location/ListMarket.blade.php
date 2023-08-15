@@ -42,7 +42,7 @@
                               <th>Stt</th>
                               <th>Hình đại diện</th>
                               <th>Tên chợ</th>
-                              {{--        <th>Địa chỉ</th> --}}
+                              {{--        <th>Address</th> --}}
                               <th>Thao tác</th>
                             </thead>
                             <tbody>
@@ -66,7 +66,7 @@
 
                               <td>
                                 <a href="{{url('admin/quan-ly-dia-diem/xem-cua-hang'."/".$GetMarketByCity->id)}}">
-                                  <button class="btn btn-success mr-2">Xem cửa hàng</button> 
+                                  <button class="btn btn-success mr-2">See store</button> 
                                 </a>
                                 <a href="{{url('admin/quan-ly-dia-diem/sua-cho'."/".$GetMarketByCity->id)}}">
                                   <button class="btn btn-primary mr-2">Sửa</button> 
@@ -84,7 +84,7 @@
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                   <p>Khi bạn xóa {{$GetMarketByCity->name}}, Tất cả cả dữ liệu bao gồm shop, sản phẩm bên trong {{$GetMarketByCity->name}} sẽ bị xóa.</p>
+                                   <p>Khi bạn xóa {{$GetMarketByCity->name}}, All cả dữ liệu bao gồm shop, sản phẩm bên trong {{$GetMarketByCity->name}} sẽ bị xóa.</p>
                                  </div>
                                  <div class="p-2">
                                    <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>

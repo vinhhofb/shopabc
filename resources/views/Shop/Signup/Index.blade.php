@@ -9,9 +9,9 @@
     <form  id="signup-user-form" action="{{url('kenh-cua-hang/dang-ky')}}" method="post">
       @csrf
       <div>
-        <p class="fz95 mb-1">Nhập số điện thoại</p>
+        <p class="fz95 mb-1">Your phone</p>
         <input type="number" name="phone" class="form-control w-100">
-        <p class="fz95 mt-2 mb-1">Nhập mật khẩu</p>
+        <p class="fz95 mt-2 mb-1">Password</p>
         <input type="password" name="password" class="form-control w-100">
         <p class="fz95 mt-2 mb-1">Nhập lại mật khẩu</p>
         <input type="password" name="re_password" class="form-control w-100">
@@ -19,9 +19,9 @@
         @if (\Session::has('msg'))
         <p class="text-danger mt-2 text-center mb-0 fz-95">{!! \Session::get('msg') !!}</p>
         @endif
-        <p class="fz95 text-center mt-3">Bạn đã có tài khoản, Đăng nhập 
+        <p class="fz95 text-center mt-3">Bạn đã có tài khoản, Login 
           <a href="{{url('kenh-cua-hang/dang-nhap')}}">
-          <span class="tx cs">Tại đây</span>
+          <span class="tx cs">Here</span>
           </a>
         </p>
       </div>

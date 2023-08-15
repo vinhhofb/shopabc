@@ -1,6 +1,6 @@
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
   <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-    <a class="tx navbar-brand brand-logo mr-5" href="{{url("/")}}" style="font-weight: bold;font-size: 80%;">Xin chào {{Auth::user()->name}}</a>
+    <a class="tx navbar-brand brand-logo mr-5" href="{{url("/")}}" style="font-weight: bold;font-size: 80%;">Hello {{Auth::user()->name}}</a>
 
   </div>
   <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
@@ -19,7 +19,7 @@
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
           <a class="dropdown-item" href="{{url('dang-xuat')}}">
             <i class="ti-power-off text-primary"></i>
-            Đăng xuất
+            Logout
           </a>
         </div>
       </li>

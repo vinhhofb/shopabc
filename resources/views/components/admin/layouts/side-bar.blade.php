@@ -40,7 +40,7 @@
       <div class="collapse" id="error">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item"> <a class="nav-link" href="{{url('admin/thuoc-tinh')}}">Thuộc tính</a></li>
-          <li class="nav-item"> <a class="nav-link" href="{{url('admin/doi-mat-khau')}}">Đổi mật khẩu</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{{url('admin/doi-mat-khau')}}">Change Password</a></li>
         </ul>
       </div>
     </li>

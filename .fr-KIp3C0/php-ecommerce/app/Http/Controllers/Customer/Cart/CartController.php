@@ -67,7 +67,8 @@ class CartController extends Controller
                 ]
             ); 
         }
-        echo "Thêm vào giỏ hàng thành công";
+        echo "
+Add to cart thành công";
         
     }
 

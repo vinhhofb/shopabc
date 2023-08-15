@@ -51,7 +51,7 @@
                           <label class="font-weight-bold fz95">Chọn nhóm người dùng</label><br>
                           <div class="form-check-inline">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="type_user" value="0">Tất cả
+                              <input type="radio" class="form-check-input" name="type_user" value="0">All
                             </label>
                           </div>
                           <div class="form-check-inline">

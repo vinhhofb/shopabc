@@ -26,14 +26,14 @@
                     <form  method="post" action="{{url('kenh-cua-hang/thong-tin-tai-khoan')}}">
                      @csrf
                      <div class="bg-white p-3">
-                      <p class="font-weight-bold" style="font-size:120%">Thông tin tài khoản</p>
+                      <p class="font-weight-bold" style="font-size:120%">Basic information</p>
                       <div class="row m-0">
                         <div class="col-12 col-md-6 p-0 pr-2 mb-2 mt-3">
                           <label class="fz95">Tên cửa hàng</label>
                           <input type="text" value="{{Auth::user()->name}}" name="name" class="form-control mr-2">
                         </div>
                         <div class="col-12 col-md-6 p-0 pl-2 mb-2 mt-3">
-                          <label class="fz95">Số điện thoại</label>
+                          <label class="fz95">Phone</label>
                           <input type="text" value="{{Auth::user()->phone}}" disabled  class="form-control mr-2">
                         </div>
                         <div class="col-12 col-md-6 p-0 pr-2 mb-2 mt-3">
@@ -50,7 +50,7 @@
                         </div>
                       </div>
                       <div class="text-center mt-4">
-                        <button type="submit" class="btn bg text-white">Chỉnh sửa</button>
+                        <button type="submit" class="btn bg text-white">Change</button>
                         @if (\Session::has('msg'))
                         <span class="text-success mt-2">{!! \Session::get('msg') !!}</span>
                         @endif

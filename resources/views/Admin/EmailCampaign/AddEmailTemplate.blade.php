@@ -22,7 +22,7 @@
                       @csrf
                       <div class="row m-0">
                         <div class="col-12 p-0 mb-4">
-                          <label class="fz95">Tiêu đề</label>
+                          <label class="fz95">Title</label>
 
                           <input type="text" name="template_title" class="form-control mr-2" required>
                           <p class="mt-1 mb-0">Ghi chú: chèn <span class="text-warning">%ten_nguoi_nhan%</span> vào nội dung để hệ thống tự thay đổi tên phù hợp khi gửi mail nhiều người</p>

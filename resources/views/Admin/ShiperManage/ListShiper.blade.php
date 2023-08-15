@@ -34,7 +34,7 @@
                            <div class="float-right"> 
                           <form method="get" action="{{url('admin/quan-ly-shiper/tim-kiem')}}">    
                             <div class="form-group" style="display: flex">                                   
-                              <input type="text" class="form-control"  placeholder="Nhập số điện thoại" value="" name="keyword" required>
+                              <input type="text" class="form-control"  placeholder="Your phone" value="" name="keyword" required>
                               <button type="submit" class="btn btn-success ml-2">Tìm</button>
 
                             </div>
@@ -48,8 +48,8 @@
                               <th>Stt</th>
                               <th>Tên người dùng</th>
                               <th>Email</th>
-                              <th>Số điện thoại</th>
-                              <th>Trạng thái</th>
+                              <th>Phone</th>
+                              <th>Status</th>
                               <th>Thao tác</th>
                             </thead>
                             <tbody>

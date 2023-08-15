@@ -1,5 +1,5 @@
 @extends("Index.Layouts.Master")
-@section('Title', 'Tìm kiếm')
+@section('Title', 'Search')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 400px) {
@@ -38,14 +38,16 @@
           <a href="{{url('chi-tiet-san-pham')."/".$searchProduct->id."/".$searchProduct->slug}}" style="color: black !important;">
             <p class="fz95 hide-scroll mt-2 mb-0" style="height: 45px;overflow-y:hidden;">{{$searchProduct->name}}</p>
           </a>
-          <p class="float-left mb-0" style="font-size:80%;margin-top: 6px;opacity: 0.8;">Đã bán: {{$searchProduct->count_sale}}</p>  
-          <p class="tx ml-2 font-weight-bold float-right my-1">{{number_format($searchProduct->price)}}đ</p>
+          <p class="float-left mb-0" style="font-size:80%;margin-top: 6px;opacity: 0.8;">Selled: {{$searchProduct->count_sale}}</p>  
+          <p class="tx ml-2 font-weight-bold float-right my-1">{{number_format($searchProduct->price)}}$</p>
           <div class="clboth"></div>
           @if(isset(Auth::user()->id))
-          <button class=" w-100 bg fz95 btn text-white" onclick="addToCart({{$searchProduct->id}})"  style="border-radius: 0;">Thêm vào giỏ hàng</button>
+          <button class=" w-100 bg fz95 btn text-white" onclick="addToCart({{$searchProduct->id}})"  style="border-radius: 0;">
+Add to cart</button>
           @else
           <a href="{{url('dang-nhap')}}">
-            <button class="w-100 bg btn text-white"  style="border-radius: 0;">Thêm vào giỏ hàng</button>
+            <button class="w-100 bg btn text-white"  style="border-radius: 0;">
+Add to cart</button>
           </a>
           @endif
         </div>

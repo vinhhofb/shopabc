@@ -29,8 +29,8 @@
                             </div>
                             <div class="col-md-6 pr-1">
                                 <div class="form-group">
-                                    <label>Địa chỉ</label>
-                                    <input type="text" class="form-control"  placeholder="Địa chỉ" name="address" required>
+                                    <label>Address</label>
+                                    <input type="text" class="form-control"  placeholder="Address" name="address" required>
                                 </div>
                             </div>
                             <div class="col-md-6 pl-3">

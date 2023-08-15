@@ -1,5 +1,5 @@
 @extends("Customer.Layouts.Master")
-@section('Title', 'Thông tin đơn hàng')
+@section('Title', 'Order Information')
 @section('Content')
 <div class="container-scroller">
   <!-- partial:partials/_navbar.html -->
@@ -22,12 +22,12 @@
             <div class="row m-0">
               <div class="col-12 col-xl-12 mb-4 mb-xl-0 p-0">
                 <div class="bg-white p-3">
-                  <p class="font-weight-bold my-3" style="font-size:120%">Quản lý đơn hàng</p>
+                  <p class="font-weight-bold my-3" style="font-size:120%">Manage Order</p>
                   @php
                   $total=0;
                   @endphp
                   @forelse($getCart as $getCart)
-                  <p>Mã đơn hàng #{{$getCart->id}} - Ngày lên đơn {{\Carbon\Carbon::parse($getCart->created_at)->format('d/m/Y')}}</p>
+                  <p>Code #{{$getCart->id}} - Created {{\Carbon\Carbon::parse($getCart->created_at)->format('d/m/Y')}}</p>
                   <div class="row m-0">
                     <div class="col-9">
                       @foreach($getShopCart as $getShopCart2)
@@ -48,7 +48,7 @@
                               </div>
                             </td>
                             <td class="fz95 pt-4" width="25%" style="line-height: 20px">{{$getProductsCart2->name}}</td>
-                            <td width="18%" class="pt-4">{{number_format($getProductsCart2->price)}}đ</td>
+                            <td width="18%" class="pt-4">{{number_format($getProductsCart2->price)}}$</td>
 
                             <td width="12%" class="pt-4">{{number_format($getProductsCart2->quanlity)}}</td>
 
@@ -66,7 +66,7 @@
                     </div>
                     <div class="col-3 p-0">
                       <div class="bg text-white p-2" style="border-radius: 8px;height: 100%;">
-                        <p class="font-weight-bold mb-1">Thông tin đơn hàng</p>
+                        <p class="font-weight-bold mb-1">Order Information</p>
                         @if($getCart->shiper_id !=null && $getCart->status !=3) 
                         <div class="w-100 mb-3 bg-white p-2" style="width: 100%;border-radius: 8px;">
                           <div class="rounded-circle" style="margin:auto;width: 70px;height: 70px;">
@@ -82,7 +82,7 @@
                         </div>
                         @endif
                         <div>
-                          <p class="fz95 float-left font-weight-bold mb-1">Trạng thái</p>
+                          <p class="fz95 float-left font-weight-bold mb-1">Status</p>
                           <p class="fz95 float-right mb-1">
                             @if($getCart->shiper_id ==null && $getCart->status ==1) 
                             Tìm người giao
@@ -94,16 +94,16 @@
                             @endif
                           </p>
                           <div class="clboth"></div>
-                          <p class="fz95 float-left font-weight-bold mb-1">Phí giao hàng</p>
+                          <p class="fz95 float-left font-weight-bold mb-1">Fee ship</p>
                           <p class="fz95 float-right mb-1">{{number_format($getCart->fee)}}đ</p>
                           <div class="clboth"></div>
-                          <p class="fz95 float-left font-weight-bold mb-1">Khuyến mãi</p>
+                          <p class="fz95 float-left font-weight-bold mb-1">Discount</p>
                           <p class="fz95 float-right mb-1">{{$getConfig[1]->value}}%</p>
                           <div class="clboth"></div>
-                          <p class="fz95 float-left font-weight-bold mb-1">VAT</p>
+                          <p class="fz95 float-left font-weight-bold mb-1">TAX</p>
                           <p class="fz95 float-right mb-1">{{$getConfig[0]->value}}%</p>
                           <div class="clboth"></div>
-                          <p class="fz95 float-left font-weight-bold mb-1">Tổng thanh toán</p>
+                          <p class="fz95 float-left font-weight-bold mb-1">Total</p>
                           <p class="fz95 float-right mb-1">{{number_format($getCart->total+$getCart->fee)}}đ</p>
                           <div class="clboth"></div>
                         </div>

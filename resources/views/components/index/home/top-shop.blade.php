@@ -1,7 +1,7 @@
 <div class="mt-3 p-2 bg w-100" >
-  <p class="font-weight-bold text-white float-left fz95 mb-0" >Cửa hàng đề xuất</p>
+  <p class="font-weight-bold text-white float-left fz95 mb-0" >Recommended store</p>
   <a href="{{url('tat-ca-cua-hang')}}">
-  <p class="text-white float-right mb-0" style="font-size: 95%">Xem thêm</p>
+  <p class="text-white float-right mb-0" style="font-size: 95%">See more</p>
   </a>
   <div style="clear: both;"></div>
   <div class="row d-flex mx-0 mb-0">
@@ -19,7 +19,7 @@
       
         <div class="px-0">
           <a href="{{url('cua-hang')."/".$GetTopShops->id}}">
-          <button class="w-100 bg btn text-white" style="border-radius: 0;">Xem cửa hàng</button>
+          <button class="w-100 bg btn text-white" style="border-radius: 0;">See store</button>
           </a>
         </div>
 

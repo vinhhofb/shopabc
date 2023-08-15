@@ -14,8 +14,8 @@ $("#login-user-form").validate({
     messages: {
         phone: {
             required: "Vui lòng nhập số điện thoại",
-            maxlength: "Số điện thoại là 10 số",
-            maxlength: "Số điện thoại là 10 số",
+            maxlength: "Phone là 10 số",
+            maxlength: "Phone là 10 số",
             digits: "Vui lòng nhập số",
         },
         password: {
@@ -47,8 +47,8 @@ $("#signup-user-form").validate({
     messages: {
         phone: {
             required: "Vui lòng nhập số điện thoại",
-            minlength: "Số điện thoại là 10 số",
-            maxlength: "Số điện thoại là 10 số",
+            minlength: "Phone là 10 số",
+            maxlength: "Phone là 10 số",
             digits: "Vui lòng nhập số",
         },
         password: {
@@ -103,8 +103,8 @@ $("#signup-shiper-form").validate({
         },
         phone: {
             required: "Vui lòng nhập số điện thoại",
-            maxlength: "Số điện thoại là 10 số",
-            maxlength: "Số điện thoại là 10 số",
+            maxlength: "Phone là 10 số",
+            maxlength: "Phone là 10 số",
             digits: "Vui lòng nhập số",
         },
         password: {
@@ -181,13 +181,13 @@ $("#login-admin-form").validate({
 //     messages: {
 //         title: {
 //             required: "Vui lòng nhập tiêu đề",
-//             maxlength: "Tiêu đề thư từ 1 đến 255 ký tự",
-//             minlength: "Tiêu đề thư từ 1 đến 255 ký tự"
+//             maxlength: "Title thư từ 1 đến 255 ký tự",
+//             minlength: "Title thư từ 1 đến 255 ký tự"
 //         },
 //         content: {
 //             required: "Vui lòng nhập nội dung",
-//             maxlength: "Tiêu đề thư từ 1 đến 25000 ký tự",
-//             minlength: "Tiêu đề thư từ 1 đến 25000 ký tự"
+//             maxlength: "Title thư từ 1 đến 25000 ký tự",
+//             minlength: "Title thư từ 1 đến 25000 ký tự"
 //         },
 //     },
 //     submitHandler: function(form) { 
@@ -330,7 +330,7 @@ $("#add-mail-config").validate({
         mail_host: {
             required: "Vui lòng nhập SMTP",
             maxlength: "SMTP từ 1 đến 250 ký tự",
-            minlength: "Tiêu đề email từ 1 đến 250 ký tự"
+            minlength: "Title email từ 1 đến 250 ký tự"
         },
         mail_port: {
             required: "Vui lòng nhập cổng",
@@ -382,13 +382,13 @@ $("#add-mail-config").validate({
 //     messages: {
 //         template_title: {
 //             required: "Vui lòng nhập tiêu đề",
-//             maxlength: "Tiêu đề email từ 1 đến 250 ký tự",
-//             minlength: "Tiêu đề email từ 1 đến 250 ký tự"
+//             maxlength: "Title email từ 1 đến 250 ký tự",
+//             minlength: "Title email từ 1 đến 250 ký tự"
 //         },
 //         template_content: {
 //             required: "Vui lòng nhập nội dung",
-//             maxlength: "Tiêu đề email từ 1 đến 3000 ký tự",
-//             minlength: "Tiêu đề email từ 1 đến 3000 ký tự"
+//             maxlength: "Title email từ 1 đến 3000 ký tự",
+//             minlength: "Title email từ 1 đến 3000 ký tự"
 //         }
 //     },
 //     submitHandler: function(form) { 
@@ -714,8 +714,8 @@ $("#add-mail-config").validate({
 //     messages: {
 //         level_name: {
 //             required: "Vui lòng nhập tiêu đề",
-//             maxlength: "Tiêu đề từ 1 đến 255 ký tự",
-//             minlength: "Tiêu đề từ 1 đến 255 ký tự"
+//             maxlength: "Title từ 1 đến 255 ký tự",
+//             minlength: "Title từ 1 đến 255 ký tự"
 //         },
 //         image_url: {
 //             required: "Vui lòng chọn hình ảnh",

@@ -1,5 +1,5 @@
 @extends("Customer.Layouts.Master")
-@section('Title', 'Lịch sử giao dịch')
+@section('Title', 'Transaction history')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -30,7 +30,7 @@
                     <div class="col-lg-12 grid-margin stretch-card p-0">
                       <div class="card">
                         <div class="card-body">
-                          <p class="font-weight-bold float-left my-3" style="font-size:120%">Lịch sử giao dịch</p>
+                          <p class="font-weight-bold float-left my-3" style="font-size:120%">Transaction history</p>
 
 
 
@@ -38,11 +38,11 @@
                             <table class="table">
                               <thead>
                                 <tr>
-                                  <th scope="col">Mã</th>
-                                  <th scope="col">Tiêu đề</th>
-                                  <th scope="col">Loại</th>
-                                  <th scope="col">Giá trị</th>
-                                  <th scope="col">Ngày tạo</th>
+                                  <th scope="col">Code</th>
+                                  <th scope="col">Title</th>
+                                  <th scope="col">Type</th>
+                                  <th scope="col">Value</th>
+                                  <th scope="col">Created</th>
                                 </tr>
                               </thead>
                               <tbody>

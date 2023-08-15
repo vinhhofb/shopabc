@@ -69,7 +69,7 @@
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                   <p>Khi bạn xóa danh mục {{$Category->name}}, Tất cả cả các cửa hàng có danh mục {{$Category->name}} sẽ bị xóa.</p>
+                                   <p>Khi bạn xóa danh mục {{$Category->name}}, All cả các cửa hàng có danh mục {{$Category->name}} sẽ bị xóa.</p>
                                  </div>
                                  <div class="p-2">
                                    <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>

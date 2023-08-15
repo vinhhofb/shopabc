@@ -92,7 +92,7 @@
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                   <p>Khi bạn xóa {{$GetCity->name}}, Tất cả cả dữ liệu bao gồm chợ, shop, sản phẩm bên trong {{$GetCity->name}} sẽ bị xóa.</p>
+                                   <p>Khi bạn xóa {{$GetCity->name}}, All cả dữ liệu bao gồm chợ, shop, sản phẩm bên trong {{$GetCity->name}} sẽ bị xóa.</p>
                                  </div>
                                  <div class="p-2">
                                    <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>

@@ -65,14 +65,14 @@
     </a>
     @else
     <a href="{{url('dang-nhap')}}">
-    <button class="btn bg text-white mr-2" style="font-size: 90%">Đăng nhập</button>
+    <button class="btn bg text-white mr-2" style="font-size: 90%">Login</button>
     </a>
     @endif
     <a href="{{url('gio-hang')}}">
-    <button class="btn bg text-white" style="font-size: 90%">Giỏ hàng</button>
+    <button class="btn bg text-white" style="font-size: 90%">Cart</button>
      </a>
   </div>
-    <span class="font-weight-bold mb-0 tx">DANH MỤC</span>
+    <span class="font-weight-bold mb-0 tx">CATEGORIES</span>
     <hr style="margin-top:5px">
     <div class="treemenu hide-scroll" style="overflow-y: scroll;height:calc(100vh - 120px);margin-top: -18px;">
         @foreach($getCategoryLevel0 as $item1)

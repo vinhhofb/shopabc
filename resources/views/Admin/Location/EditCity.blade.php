@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Chỉnh sửa tỉnh thành')
+@section('Title', 'Change tỉnh thành')
 @section('Content')
 <div class="container-scroller">
   <x-admin.layouts.header-dashboard/>
@@ -17,7 +17,7 @@
               <div class="col-12 col-xl-12 mb-4 mb-xl-0">
                 <div>
                   <div class="bg-white p-4">
-                    <h4 class="mb-4">Chỉnh sửa tỉnh thành</h4>
+                    <h4 class="mb-4">Change tỉnh thành</h4>
                     <form action="{{url('admin/quan-ly-dia-diem/sua-thanh-pho')."/".$GetCityById->id}}" method="post" enctype="multipart/form-data">
                       @csrf
                       <div class="row">

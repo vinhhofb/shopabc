@@ -5,14 +5,14 @@
 
 </style>
 <div class="mt-3 p-2" style="width: 100%;background: white;">
-  <p class="font-weight-bold" style="font-size: 95%">Chọn chợ</p>
+  <p class="font-weight-bold" style="font-size: 95%">Choose market</p>
   <div class="row d-flex mx-0" style="margin-top:-20px;overflow-x: auto;height: 280px;">
     <div class="px-1 text-center pt-3 cs top-sale-item" style="width: 10%;">
         <a href="{{url('chon-cho/0')}}">
             <div class="rounded-circle bg @if(0 ==Session::get('id_market')) market-active @endif"  style="width: 100%;height: 75px">
-                <p class="font-weight-bold text-center text-white" style="line-height: 73px">Tất cả</p>
+                <p class="font-weight-bold text-center text-white" style="line-height: 73px">All</p>
             </div>
-            <p style="font-size:80%" class="mb-0">Tất cả</p>
+            <p style="font-size:80%" class="mb-0">All</p>
         </a>
     </div>
    

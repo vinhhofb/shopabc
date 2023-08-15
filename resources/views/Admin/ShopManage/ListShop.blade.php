@@ -32,7 +32,7 @@
                         {{--  <div class="float-right"> 
                           <form method="get" action="{{url('admin/quan-ly-nguoi-dung/tim-kiem')}}">    
                             <div class="form-group" style="display: flex">                           
-                              <input type="number" class="form-control"  placeholder="Nhập số điện thoại" name="keyword">
+                              <input type="number" class="form-control"  placeholder="Your phone" name="keyword">
                               <button type="submit" class="btn btn-success ml-2">Tìm</button>
                             </div>
                           </form> 
@@ -44,8 +44,8 @@
                               <th>Stt</th>
                               <th width="20%">Tên người dùng</th>
                               <th width="17%">Email</th>
-                              <th width="17%">Số điện thoại</th>
-                              <th width="17%">Trạng thái</th>
+                              <th width="17%">Phone</th>
+                              <th width="17%">Status</th>
                               <th>Thao tác</th>
                             </thead>
                             <tbody>
@@ -78,7 +78,7 @@
                               </td>
                               <td>
                                 <a href="{{url('admin/quan-ly-cua-hang/xem-tat-ca-cua-hang')."/".$GetShop->id}}">
-                                  <button class="btn btn-success mr-2 mb-2">Xem cửa hàng</button>
+                                  <button class="btn btn-success mr-2 mb-2">See store</button>
                                 </a>
                                 @if($GetShop->active == 1)
                                 <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetShop->id}}">Tạm khóa</button>

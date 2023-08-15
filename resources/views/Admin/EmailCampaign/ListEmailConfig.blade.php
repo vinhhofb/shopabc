@@ -46,7 +46,7 @@
                               <th>Host</th>
                               <th>Cổng</th>
                              
-                              <th>Loại</th>
+                              <th>Type</th>
                             </thead>
                             <tbody>
 

@@ -1,5 +1,5 @@
 @extends("Index.Layouts.Master")
-@section('Title', 'Tất cả cửa hàng')
+@section('Title', 'All cửa hàng')
 @section('Content')
 
 <div class="container d-flex" style="padding-top: 60px;">
@@ -8,7 +8,7 @@
   </div>
   <div class="px-3" style="width: calc(100% - 210px);">
     <div class="mt-3 p-2 bg-white" style="width: 100%;border-radius: 8px;">
-      <p class="fz95 font-weight-bold mb-0">Tất cả cửa hàng</p>
+      <p class="fz95 font-weight-bold mb-0">All cửa hàng</p>
       <div style="clear: both;"></div>
       <div class="row d-flex mx-0 mb-0">
         @forelse($GetTopShops as $GetTopShops)
@@ -21,7 +21,7 @@
             
             <div class="px-2 pb-2">
               <a href="{{url('cua-hang')."/".$GetTopShops->id}}">
-                <button class="w-100 bg btn text-white">Xem cửa hàng</button>
+                <button class="w-100 bg btn text-white">See store</button>
               </a>
             </div>
 

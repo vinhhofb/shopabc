@@ -13,7 +13,7 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div id="notification-add-to-cart" class=" shadow-sm pl-3" style="width: 200px;height: 50px;background: white;position: fixed;z-index: 999999;right: -200px;margin-top:70px;border-bottom: 3px solid #e03;">
-        <span style="line-height:50px">Đã thêm vào giỏ hàng</span>
+        <span style="line-height:50px">Added to cart</span>
     </div>
     @include('Index.Layouts.Header')
     @section('Content')

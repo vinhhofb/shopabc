@@ -26,14 +26,14 @@
                    <form action="{{url('thong-tin-ca-nhan')}}" method="post">
                     @csrf
                     <div class="bg-white p-3" style="border-radius: 8px;">
-                      <p class="font-weight-bold my-3" style="font-size:120%">Thông tin tài khoản</p>
+                      <p class="font-weight-bold my-3" style="font-size:120%">Basic information</p>
                       <div class="row m-0">
                         <div class="col-6 p-0 pr-2 mb-2">
-                          <label class="fz95">Tên khách hàng</label>
+                          <label class="fz95">Customer name</label>
                           <input type="text" value="{{Auth::user()->name}}" name="name" class="form-control mr-2">
                         </div>
                         <div class="col-6 p-0 pl-2 mb-2">
-                          <label class="fz95">Số điện thoại</label>
+                          <label class="fz95">Phone</label>
                           <input type="text" value="{{Auth::user()->phone}}" disabled  class="form-control mr-2">
                         </div>
                         <div class="col-6 p-0 pr-2 mb-2">
@@ -41,7 +41,7 @@
                           <input type="email" value="{{Auth::user()->email}}" name="email" class="form-control mr-2">
                         </div>
                         <div class="col-6 p-0 pr-2 mb-2 pl-2">
-                          <label class="fz95">Địa chỉ</label>
+                          <label class="fz95">Address</label>
                           <input type="text" value="{{Auth::user()->address}}" name="address" class="form-control mr-2">
                         </div>
 
@@ -50,7 +50,7 @@
 
 
                       <div class="text-center">
-                        <button type="submit" class="btn bg text-white">Chỉnh sửa</button>
+                        <button type="submit" class="btn bg text-white">Change</button>
                         @if (\Session::has('msg'))
                         <span class="text-success mt-2">{!! \Session::get('msg') !!}</span>
                         @endif

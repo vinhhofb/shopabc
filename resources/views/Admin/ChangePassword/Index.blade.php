@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Đổi mật khẩu')
+@section('Title', 'Change Password')
 @section('Content')
 <div class="container-scroller">
   <x-admin.layouts.header-dashboard/>
@@ -17,20 +17,20 @@
               <div class="col-12 col-xl-12 mb-4 mb-xl-0 p-0">
                 <div>
                   <div class="bg-white p-4">
-                    <h4 class="mb-4">Đổi mật khẩu</h4>
+                    <h4 class="mb-4">Change Password</h4>
                     <form method="post" action="{{url('admin/doi-mat-khau')}}">
                       @csrf
                       <div class="row m-0">
                         <div class="col-6 p-0 pr-2 mb-2">
-                          <label class="fz95">Mật khẩu hiện tại</label>
+                          <label class="fz95">Password Now</label>
                           <input type="password" name="passwordNow" class="form-control mr-2" required>
                         </div>
                         <div class="col-6 p-0 pl-2 mb-2">
-                          <label class="fz95">Mật khẩu mới</label>
+                          <label class="fz95">Password New</label>
                           <input type="password" name="passwordNew" class="form-control mr-2" required>
                         </div>
                         <div class="col-6 p-0 pr-2 mb-2">
-                          <label class="fz95">Nhập lại mật khẩu mới</label>
+                          <label class="fz95">Repassword</label>
                           <input type="password" name="passwordNewRe" class="form-control mr-2" required>
                         </div>  
                         <div class="col-12 p-0  text-center">
@@ -39,7 +39,7 @@
                           @endif
                         </div>
                         <div class="col-12 p-0 pr-2 mb-2 text-center mt-3">
-                          <button class="btn bg text-white">Đổi mật khẩu</button>
+                          <button class="btn bg text-white">Change Password</button>
                         </div>
                       </div>
                     </form>

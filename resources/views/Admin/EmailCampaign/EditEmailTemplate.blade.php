@@ -22,7 +22,7 @@
                       @csrf
                       <div class="row m-0">
                         <div class="col-12 p-0 mb-4">
-                          <label class="fz95">Tiêu đề</label>
+                          <label class="fz95">Title</label>
 
                           <input type="text" value="{{$getEmailTemplate->template_title}}" name="template_title" class="form-control mr-2" required>
                           <p class="mt-1 mb-0">Ghi chú: chèn <span class="text-warning">%ten_nguoi_nhan%</span> vào nội dung để hệ thống tự thay đổi tên phù hợp khi gửi mail nhiều người</p>
@@ -35,7 +35,7 @@
                           <p class="mt-1 mb-0 " >Ghi chú: chèn <span class="text-warning">%ten_nguoi_nhan%</span> vào nội dung để hệ thống tự thay đổi tên phù hợp khi gửi mail nhiều người</p>
                         </div>
                         <div class="col-12 p-0 pr-2 mb-2 text-center mt-3">
-                          <button class="btn bg text-white">Chỉnh sửa</button>
+                          <button class="btn bg text-white">Change</button>
                         </div>
                       </div>
                     </form>

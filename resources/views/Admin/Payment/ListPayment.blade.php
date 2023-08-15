@@ -40,7 +40,7 @@
                                 <th width="25%">Thông tin</th>
                                 <th>Số tiền rút</th>
                                 <th>Ngày rút</th>
-                                <th>Trạng thái</th>
+                                <th>Status</th>
                                 <th>Thao tác</th>
                               </thead>
                               <tbody>

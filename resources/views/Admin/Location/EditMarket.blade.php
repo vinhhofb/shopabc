@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Chỉnh sửa chợ')
+@section('Title', 'Change chợ')
 @section('Content')
 <div class="container-scroller">
   <x-admin.layouts.header-dashboard/>
@@ -17,7 +17,7 @@
               <div class="col-12 col-xl-12 mb-4 mb-xl-0">
                 <div>
                   <div class="bg-white p-4">
-                    <h4 class="mb-4">Chỉnh sửa chợ</h4>
+                    <h4 class="mb-4">Change chợ</h4>
                     <form action="{{url('admin/quan-ly-dia-diem/sua-cho')."/".$GetMarketById->id}}" method="post" enctype="multipart/form-data">
                       @csrf
                       <div class="row">
@@ -29,8 +29,8 @@
                         </div>
                         <div class="col-md-6 pr-1">
                           <div class="form-group">
-                            <label>Địa chỉ</label>
-                            <input type="text" class="form-control"  placeholder="Địa chỉ" name="address" value="{{$GetMarketById->address}}" required>
+                            <label>Address</label>
+                            <input type="text" class="form-control"  placeholder="Address" name="address" value="{{$GetMarketById->address}}" required>
                           </div>
                         </div>
                         <div class="col-md-4 px-1 pl-3">
