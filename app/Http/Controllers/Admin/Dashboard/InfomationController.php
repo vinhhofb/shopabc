@@ -24,6 +24,6 @@ class InfomationController extends Controller
                 'area'=>$request->area,
             ]
         );
-         return redirect()->back()->with('msg', 'Đổi thông tin Success'); 
+         return redirect()->back()->with('msg', 'Change Success'); 
     }
 }

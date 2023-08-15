@@ -25,7 +25,7 @@ class ChangePasswordController extends Controller
             $CheckPassword->save();
             return redirect()->back()->with('msg', 'Change Password Success'); 
         }else{
-            return redirect()->back()->with('msg', 'Mật khẩu cũ chưa chính xác');
+            return redirect()->back()->with('msg', 'Old password is not correct');
         }
         
     }

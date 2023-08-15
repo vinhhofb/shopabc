@@ -33,6 +33,6 @@ class InfomationController extends Controller
             'bank_id'=>$request->bank_id,
         ]
     );
-    return redirect()->back()->with('msg', 'Đổi thông tin Success'); 
+    return redirect()->back()->with('msg', 'Change Success'); 
 }
 }

@@ -37,7 +37,7 @@ class AccountController extends Controller
                     Auth::login($user,true);
                     return Redirect::to('/kenh-giao-hang/nhan-dien-guong-mat');
                 }else{
-                    return redirect()->back()->with('msg', 'Tài khoản của bạn đã bị Lock');
+                    return redirect()->back()->with('msg', 'Your account has been locked');
                 }  
             }else{
                 return redirect()->back()->with('msg', 'Wrong account or password');
@@ -60,7 +60,7 @@ class AccountController extends Controller
         $phone =  $request->phone;
         $user = User::where('phone', '=', $phone)->first();
         if(isset($user)){
-            return redirect()->back()->with('msg', 'Phone đã tồn tại');
+            return redirect()->back()->with('msg', 'Phone already exists');
         }else{
             $user = new User();
             $user->name = $request['name'];
