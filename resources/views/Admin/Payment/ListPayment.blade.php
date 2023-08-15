@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Quản lý thanh toán')
+@section('Title', 'Payment Manage')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -30,18 +30,18 @@
                     <div class="col-lg-12 grid-margin stretch-card p-0">
                       <div class="card">
                         <div class="card-body">
-                          <h4 class="card-title float-left">Danh sách thanh toán</h4>
-                          <p class="float-right mt-2">Số dư: {{number_format(Auth::user()->balance)}}đ</p>
+                          <h4 class="card-title float-left">Payment List</h4>
+                          <p class="float-right mt-2">Balance: {{number_format(Auth::user()->balance)}}$</p>
                           <div style="clear:both;"></div>
                           <div class="table-responsive">
                             <table class="table table-hover table-striped">
                               <thead>
-                                <th>Stt</th>
-                                <th width="25%">Thông tin</th>
-                                <th>Số tiền rút</th>
-                                <th>Ngày rút</th>
+                                <th>code</th>
+                                <th width="25%">Information</th>
+                                <th>Withraw</th>
+                                <th>Date</th>
                                 <th>Status</th>
-                                <th>Thao tác</th>
+                                <th>Method</th>
                               </thead>
                               <tbody>
                                <p style="display: none">{{$id = 1}}</p>
@@ -53,27 +53,27 @@
                                   
                                   - {{$Payment->name}}
                                   <br>
-                                  - Sđt: {{$Payment->phone}}
+                                  - Phone: {{$Payment->phone}}
                                   <br>
-                                  - Stk: {{$Payment->bank_code}}
+                                  - Bank number: {{$Payment->bank_code}}
                                   <br>
-                                  - Ngân hàng: {{$Payment->bank_name}}
+                                  - Bank: {{$Payment->bank_name}}
                                 </td>
                                 <td>
-                                  {{number_format($Payment->value)}}đ
+                                  {{number_format($Payment->value)}}$
                                 </td>
                                 <td>{{\Carbon\Carbon::parse($Payment->created_at)->setTimezone('Asia/Ho_Chi_Minh')->format('d/m/Y')}}</td>
 
                                 <td>
                                   @if($Payment->status == 0)
-                                  <span class="text-warning">Chờ xử lý</span>
+                                  <span class="text-warning">Pending</span>
                                   @elseif($Payment->status == 1)
-                                  <span class="text-success">Đã chuyển tiền</span>
+                                  <span class="text-success">Success</span>
                                   @endif
                                 </td>
                                 <td>
                                  @if($Payment->status == 0)
-                                 <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$Payment->id}}">Đã chuyển tiền</button>    
+                                 <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$Payment->id}}">Success</button>    
                                  @endif                         
                                </td>
                              </tr>
@@ -81,19 +81,19 @@
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Khóa người dùng</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Block account</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                   <p>Bạn đã chuyển {{number_format($Payment->value)}} cho tài xế {{$Payment->name}}?</p>
+                                   <p>You sended {{number_format($Payment->value)}} for shiper{{$Payment->name}}?</p>
                                  </div>
                                  <div class="p-2">
-                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                    <a  href="{{url('admin/quan-ly-thanh-toan/da-chuyen-tien')."/".$Payment->id}}">
                                     <button type="button" class="btn btn-danger float-right mr-2">
-                                      Đồng ý                   
+                                      OK                   
                                     </button>
                                   </a>
                                   <div style="clear: both"></div>

@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Thiết lập')
+@section('Title', 'Config')
 @section('Content')
 <div class="container-scroller">
   <x-admin.layouts.header-dashboard/>
@@ -17,12 +17,12 @@
               <div class="col-12 col-xl-12 mb-4 mb-xl-0 p-0">
                 <div>
                   <div class="bg-white p-4">
-                    <h4 class="mb-4">Thiết lập</h4>
+                    <h4 class="mb-4">Config</h4>
                     <form method="post" action="">
                       @csrf
                       <div class="row m-0">
                         <div class="col-6 p-0 pr-2 mb-2">
-                          <label class="fz95">Thời gian trì hoãn gửi email</label>
+                          <label class="fz95">Timeout send email</label>
                           <input type="number" name="time" class="form-control mr-2" value="{{$GetTimeDelay->value}}" required>
                         </div>
                         
@@ -32,7 +32,7 @@
                           @endif
                         </div>
                         <div class="col-12 p-0 pr-2 mb-2 text-center mt-3">
-                          <button class="btn btn-primary text-white">Thay đổi</button>
+                          <button class="btn btn-primary text-white">Change</button>
                         </div>
                       </div>
                     </form>

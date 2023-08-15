@@ -43,7 +43,7 @@ class AccountController extends Controller
                     Auth::login($user,true);
                     return Redirect::to('/kenh-cua-hang/thong-tin-tai-khoan');
                 }else{
-                    return redirect()->back()->with('msg', 'Tài khoản của bạn đã bị khóa');
+                    return redirect()->back()->with('msg', 'Tài khoản của bạn đã bị Lock');
                 } 
             }else{
                 return redirect()->back()->with('msg', 'Sai tài khoản hoặc mật khẩu');

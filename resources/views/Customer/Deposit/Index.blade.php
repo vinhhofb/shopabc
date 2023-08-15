@@ -33,7 +33,7 @@
                           <div class="col-3 p-0 pr-2 mb-2 pr-3">
                             <div class="bg text-white p-2">
                               <p>Balance</p>
-                              <p class="font-weight-bold float-right mb-0">{{number_format(Auth::user()->balance)}}đ</p>
+                              <p class="font-weight-bold float-right mb-0">{{number_format(Auth::user()->balance)}}$</p>
                               <div class="clboth"></div>
                             </div>
                           </div>

@@ -33,6 +33,6 @@ class ConfigController extends Controller
                 'value'=>$request['feeship'],
             ]
         );
-        return redirect()->back()->with('msg', 'Thay đổi thành công');     
+        return redirect()->back()->with('msg', 'Change Success');     
     }
 }

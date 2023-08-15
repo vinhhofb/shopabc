@@ -1,5 +1,5 @@
 @extends("Shiper.Layouts.Master")
-@section('Title', 'Thông tin cá nhân')
+@section('Title', 'Information cá nhân')
 @section('Content')
 <div class="container-scroller">
   <!-- partial:partials/_navbar.html -->
@@ -29,7 +29,7 @@
                         <p class="font-weight-bold my-3" style="font-size:120%">Basic information</p>
                         <div class="row m-0">
                           <div class="col-12 col-md-6 p-0 pr-2 mb-2">
-                            <label class="fz95">Tên người giao hàng</label>
+                            <label class="fz95">Name người Shiper</label>
                             <input type="text" value="{{Auth::user()->name}}"  class="form-control mr-2" disabled>
                           </div>
                           <div class="col-12 col-md-6 p-0 pl-2 mb-2">

@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Quản lý địa điểm')
+@section('Title', 'Location Manage')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -28,16 +28,16 @@
                     <div class="col-lg-12 grid-margin stretch-card p-0">
                       <div class="card">
                         <div class="card-body">
-                         <h4 class="card-title float-left mt-2">Danh sách tỉnh thành</h4>
+                         <h4 class="card-title float-left mt-2">LIst location</h4>
                          <div class="float-right"> 
                            <div class="d-flex">
                              <a class="mr-2" href="{{url("admin/quan-ly-dia-diem/them-thanh-pho")}}">
-                              <div class="btn btn-success">Thêm tỉnh thành</div>
+                              <div class="btn btn-success">Add location</div>
                             </a>
                             <form method="get" action="{{url("admin/quan-ly-dia-diem/tim-kiem")}}" >    
                               <div class="form-group" style="display: flex">                                   
-                                <input type="text" class="form-control"  placeholder="Nhập tên tỉnh thành" value="" name="keyword" required>
-                                <button type="submit" class="btn btn-success ml-2">Tìm</button>
+                                <input type="text" class="form-control"  placeholder="Enter the name of the location" value="" name="keyword" required>
+                                <button type="submit" class="btn btn-success ml-2">Search</button>
 
                               </div>
                             </form>
@@ -48,10 +48,10 @@
                         <div class="table-responsive">
                           <table class="table table-hover table-striped">
                             <thead>
-                              <th>Stt</th>
-                              <th>Hình đại diện</th>
-                              <th>Tên tỉnh thành</th>
-                              <th>Thao tác</th>
+                              <th>code</th>
+                              <th>Image</th>
+                              <th>Location</th>
+                              <th>Method</th>
                             </thead>
                             <tbody>
                              <p style="display: none">{{$id = 1}}</p>
@@ -74,31 +74,31 @@
 
                               <td>
                                 <a href="{{url('admin/quan-ly-dia-diem/xem-cho'."/".$GetCity->id)}}">
-                                  <button class="btn btn-success mr-2">Xem chợ</button> 
+                                  <button class="btn btn-success mr-2">See Market</button> 
                                 </a>
                                 <a href="{{url('admin/quan-ly-dia-diem/sua-thanh-pho'."/".$GetCity->id)}}">
-                                  <button class="btn btn-primary mr-2">Sửa</button> 
+                                  <button class="btn btn-primary mr-2">Edit</button> 
                                 </a>
-                                <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetCity->id}}">Xóa</button>                                                                         
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetCity->id}}">Delete</button>                                                                         
                               </td>
                             </tr>
                             <div class="modal fade mt-5" id="exampleModalBlock{{$GetCity->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Xóa thành phố</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                   <p>Khi bạn xóa {{$GetCity->name}}, All cả dữ liệu bao gồm chợ, shop, sản phẩm bên trong {{$GetCity->name}} sẽ bị xóa.</p>
+                                   <p>When delete {{$GetCity->name}}, All all shopchợ, shop, Products inside {{$GetCity->name}} Will delete</p>
                                  </div>
                                  <div class="p-2">
-                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                    <a href="{{url('admin/quan-ly-dia-diem/xoa-thanh-pho')."/".$GetCity->id}}">
                                     <button type="button" class="btn btn-danger float-right mr-2">
-                                      Xóa                   
+                                      Delete                   
                                     </button>
                                   </a>
 
@@ -113,19 +113,19 @@
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Mở khóa người dùng</h5>
+                                  <h5 class="modal-title" id="exampleModalLabel">Unlock user</h5>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                 <p>Khi bạn mở khóa {{$GetCity->name}}, {{$GetCity->name}} sẽ có thể đăng nhập và sử dụng các chức năng của người dùng.</p>
+                                 <p>When Unlock {{$GetCity->name}}, {{$GetCity->name}} will be able to login and use user functions.</p>
                                </div>
                                <div class="p-2">
-                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                  <a  href="{{url('admin/quan-ly-nguoi-dung/khoa-mo-nguoi-dung')."/".$GetCity->id}}">
                                   <button type="button" class="btn btn-success float-right mr-2">
-                                    Mở khóa                    
+                                    Unlock                    
                                   </button>
                                 </a>
 

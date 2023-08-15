@@ -44,8 +44,8 @@ class SendEmailAuto implements ShouldQueue
 
         $getNameUser = DB::table('users')->where('id',$this->id_user)->first();
         
-        $titleEmailReplace = str_replace("%ten_nguoi_nhan%", $getNameUser->name, $getEmailTemplate->template_title);
-        $contentEmailReplace = str_replace("%ten_nguoi_nhan%", $getNameUser->name, $getEmailTemplate->template_content);
+        $titleEmailReplace = str_replace("%User%", $getNameUser->name, $getEmailTemplate->template_title);
+        $contentEmailReplace = str_replace("%User%", $getNameUser->name, $getEmailTemplate->template_content);
         try{
             $transport = (new \Swift_SmtpTransport($getEmailConfig->mail_host,$getEmailConfig->mail_port))
             ->setUsername($getEmailConfig->mail_username)->setPassword($getEmailConfig->mail_password)->setEncryption($getEmailConfig->mail_encryption);

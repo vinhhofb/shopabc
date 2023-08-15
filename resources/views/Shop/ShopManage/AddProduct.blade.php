@@ -1,5 +1,5 @@
 @extends("Shop.Layouts.Master")
-@section('Title', 'Thêm sản phẩm')
+@section('Title', 'Add Products')
 @section('Content')
 <div class="container-scroller">
   <x-shop.layouts.header-dashboard/>
@@ -17,14 +17,14 @@
               <div class="col-12 col-xl-12 mb-4 mb-xl-0">
                 <div>
                   <div class="bg-white p-4">
-                    <h4 class="mb-4">Thêm sản phẩm</h4>
+                    <h4 class="mb-4">Add Products</h4>
                     <form action="{{url('kenh-cua-hang/quan-ly-cua-hang/them-san-pham')."/".$IdShop}}" method="post" enctype="multipart/form-data">
                       @csrf
                       <div class="row">
                         <div class="col-md-6 pr-1">
                           <div class="form-group">
-                            <label>Tên sản phẩm</label>
-                            <input type="text" class="form-control"  placeholder="sản phẩm" name="name" required>
+                            <label>Product Name</label>
+                            <input type="text" class="form-control"  placeholder="Products" name="name" required>
                           </div>
                         </div>
                         <div class="col-md-6 px-3">
@@ -40,7 +40,7 @@
                               <option value="kg">kg</option>
                               <option value="cái">cái</option>
                               <option value="thùng">thùng</option>
-                              <option value="sản phẩm">sản phẩm</option>
+                              <option value="Products">Products</option>
                             </select>
                           </div>
                         </div>
@@ -56,13 +56,13 @@
                         </div>
                         <div class="col-md-6 px-3">
                           <div class="form-group">
-                            <label>Hình ảnh</label>
+                            <label>Image</label>
                             <input type="file" class="form-control" placeholder="image" name="image" required>
                           </div>
 
                         </div>
                         <div class="col-12 px-3 mt-2">
-                          <label>Nội dung <span class="required"></span></label>
+                          <label>Content <span class="required"></span></label>
                           @if($errors->has('news_content'))
                           <small class="text-danger mt-1 float-right" style="font-size: 90%">
                             {{$errors->first('news_content')}}
@@ -78,7 +78,7 @@
                         <h4>{{$errors->first()}}</h4>
                       @endif</p>
 
-                      <button type="submit" class="btn btn-info btn-fill pull-right">Thêm sản phẩm</button>
+                      <button type="submit" class="btn btn-info btn-fill pull-right">Add Products</button>
                       <div class="clearfix"></div>
                     </form>
                   </div>

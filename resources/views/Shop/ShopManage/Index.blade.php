@@ -1,5 +1,5 @@
 @extends("Shop.Layouts.Master")
-@section('Title', 'Danh sách sản phẩm')
+@section('Title', 'Product List')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -30,11 +30,11 @@
                       <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card">
                           <div class="card-body">
-                           <p class="font-weight-bold float-left" style="font-size:120%">Danh sách cửa hàng</p>
+                           <p class="font-weight-bold float-left" style="font-size:120%">Store List</p>
                            <div class="float-right"> 
                            <div class="d-flex">
                              <a class="mr-2" href="{{url("kenh-cua-hang/quan-ly-cua-hang/them-cua-hang")}}">
-                              <div class="btn btn-success">Thêm cửa hàng</div>
+                              <div class="btn btn-success">Add store</div>
                             </a>
                             
                           </div> 
@@ -46,12 +46,12 @@
                               <thead>
                                 <tr>
                                   <th width="5%">ID</th>
-                                  <th width="15%">Hình đại diện</th>
-                                  <th>Tên cửa hàng</th>
+                                  <th width="15%">Image</th>
+                                  <th>Store Name</th>
 
                                   <th width="18%">Status</th>
 
-                                  <th width="25%">Thao tác</th>
+                                  <th width="25%">Method</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -71,22 +71,22 @@
                            
                                 <td>
                                   @if($GetShop->active == 1)
-                                  Đang hoạt động
+                                  Active
                                   @elseif($GetShop->active == 0)
-                                  Tạm khóa
+                                  Hiden
                                   @endif
                                 </td>
                                 <td>
                                   <a href="{{url('kenh-cua-hang/quan-ly-cua-hang/san-pham')."/".$GetShop->id}}">
-                                    <div class="btn btn-success mr-2 ">Xem sản phẩm</div>
+                                    <div class="btn btn-success mr-2 ">See Products</div>
                                   </a>
                                   <a href="{{url('kenh-cua-hang/quan-ly-cua-hang/sua-cua-hang')."/".$GetShop->id}}">
-                                    <div class="btn btn-success mr-2">Sửa</div>
+                                    <div class="btn btn-success mr-2">Edit</div>
                                   </a>
                                   @if($GetShop->active == 1)
-                                  <div class="btn btn-danger mt-2" data-toggle="modal" data-target="#exampleModalBlock{{$GetShop->id}}">Tạm khóa</div>
+                                  <div class="btn btn-danger mt-2" data-toggle="modal" data-target="#exampleModalBlock{{$GetShop->id}}">Hiden</div>
                                   @elseif($GetShop->active == 0)
-                                  <div class="btn btn-success mt-2"  data-toggle="modal" data-target="#exampleModalUnLock{{$GetShop->id}}">Mở khóa</div>
+                                  <div class="btn btn-success mt-2"  data-toggle="modal" data-target="#exampleModalUnLock{{$GetShop->id}}">Unlock</div>
                                   @endif                              
                                 </td>
                               </tr>
@@ -94,19 +94,19 @@
                                 <div class="modal-dialog" role="document">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Khóa cửa hàng của bạn</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Lock Store của bạn</h5>
                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                       </button>
                                     </div>
                                     <div class="modal-body">
-                                     <p>Khi bạn khóa cửa hàng {{$GetShop->name}},cửa hàng {{$GetShop->name}} sẽ không được hiển thị trên hệ thống.</p>
+                                     <p>When you lock Store {{$GetShop->name}},Store {{$GetShop->name}} sẽ không được Show trên System.</p>
                                    </div>
                                    <div class="p-2">
-                                     <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                     <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                      <a  href="{{url('/kenh-cua-hang/quan-ly-cua-hang/khoa-mo-cua-hang')."/".$GetShop->id}}">
                                       <button type="button" class="btn btn-danger float-right mr-2">
-                                        Khóa                    
+                                        Lock                    
                                       </button>
                                     </a>
 
@@ -121,19 +121,19 @@
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Mở khóa người dùng</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Unlock user</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                   <p>Khi bạn mở khóa tài khoản cửa hàng {{$GetShop->name}}, {{$GetShop->name}} sẽ có thể đăng nhập và sử dụng các chức năng của một cửa hàng.</p>
+                                   <p>When UnLock Store {{$GetShop->name}}, {{$GetShop->name}} will be able to log in and use the functions of a Store.</p>
                                  </div>
                                  <div class="p-2">
-                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                    <a  href="{{url('/kenh-cua-hang/quan-ly-cua-hang/khoa-mo-cua-hang')."/".$GetShop->id}}">
                                     <button type="button" class="btn btn-success float-right mr-2">
-                                      Mở khóa                    
+                                      Unlock                    
                                     </button>
                                   </a>
                                   <div style="clear: both"></div>

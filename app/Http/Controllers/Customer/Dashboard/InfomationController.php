@@ -24,6 +24,6 @@ class InfomationController extends Controller
                 'address'=>$request->address,
             ]
         );
-         return redirect()->back()->with('msg', 'Đổi thông tin thành công'); 
+         return redirect()->back()->with('msg', 'Đổi thông tin Success'); 
     }
 }

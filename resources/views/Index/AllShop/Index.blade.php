@@ -1,5 +1,5 @@
 @extends("Index.Layouts.Master")
-@section('Title', 'All cửa hàng')
+@section('Title', 'All Store')
 @section('Content')
 
 <div class="container d-flex" style="padding-top: 60px;">
@@ -8,7 +8,7 @@
   </div>
   <div class="px-3" style="width: calc(100% - 210px);">
     <div class="mt-3 p-2 bg-white" style="width: 100%;border-radius: 8px;">
-      <p class="fz95 font-weight-bold mb-0">All cửa hàng</p>
+      <p class="fz95 font-weight-bold mb-0">All Store</p>
       <div style="clear: both;"></div>
       <div class="row d-flex mx-0 mb-0">
         @forelse($GetTopShops as $GetTopShops)
@@ -30,7 +30,7 @@
         @empty
         <div class="pb-5" style="margin:auto;width: 350px;">
           <img src="../index/images/icons/empty.svg" width="100%">
-          <p class="text-center font-weight-bold mt-3 text-white">Rất tiếc, chưa có dữ liệu.</p>
+          <p class="text-center font-weight-bold mt-3 text-white">Rất tiếc, No data yet.</p>
         </div>
         @endforelse
       </div>

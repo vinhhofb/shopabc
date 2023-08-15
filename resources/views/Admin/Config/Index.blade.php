@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Thiết lập')
+@section('Title', 'Config')
 @section('Content')
 <div class="container-scroller">
   <x-admin.layouts.header-dashboard/>
@@ -17,7 +17,7 @@
               <div class="col-12 col-xl-12 mb-4 mb-xl-0 p-0">
                 <div>
                   <div class="bg-white p-4">
-                    <h4 class="mb-4 mt-2">Thiết lập</h4>
+                    <h4 class="mb-4 mt-2">Config</h4>
                     <form method="post" action="{{url('admin/thiet-lap')}}">
                       @csrf
                       <div class="row m-0">
@@ -26,11 +26,11 @@
                           <input type="text" name="vat" class="form-control mr-2" value="{{$config[0]->value}}" required>
                         </div>
                         {{-- <div class="col-6 p-0 pl-2 mb-2">
-                          <label class="fz95">Giảm giá(%)</label>
+                          <label class="fz95">DIscount(%)</label>
                           <input type="text" name="discount" class="form-control mr-2" value="{{$config[1]->value}}" required>
                         </div> --}}
                         <div class="col-6 p-0 pr-2 mb-2">
-                          <label class="fz95">Chiết khấu(%)</label>
+                          <label class="fz95">Discount(%)</label>
                           <input type="text" name="feeship" class="form-control mr-2" value="{{$config[2]->value}}" required>
                         </div>  
                         <div class="col-12 p-0  text-center">
@@ -39,7 +39,7 @@
                           @endif
                         </div>
                         <div class="col-12 p-0 pr-2 mb-2 text-center mt-3">
-                          <button class="btn bg text-white">Thay đổi</button>
+                          <button class="btn bg text-white">Change</button>
                         </div>
                       </div>
                     </form>

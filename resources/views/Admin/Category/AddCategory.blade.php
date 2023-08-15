@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Thêm danh mục')
+@section('Title', 'Add')
 @section('Content')
 <div class="container-scroller">
   <x-admin.layouts.header-dashboard/>
@@ -17,13 +17,13 @@
               <div class="col-12 col-xl-12 mb-4 mb-xl-0 p-0">
                 <div>
                   <div class="bg-white p-4">
-                    <h4 class="mb-4">Thêm danh mục</h4>
+                    <h4 class="mb-4">Add</h4>
                     <form action="{{url('admin/quan-ly-danh-muc/them-danh-muc')}}" method="post" enctype="multipart/form-data">
                       @csrf
                       <div class="row">
                         <div class="col-md-6 pr-1">
                           <div class="form-group">
-                            <label>Tên danh mục</label>
+                            <label>Name</label>
                             <input type="text" class="form-control" name="name" required>
                           </div>
                         </div>
@@ -34,7 +34,7 @@
                         <h4>{{$errors->first()}}</h4>
                       @endif</p>
                       
-                      <button type="submit" class="btn btn-info btn-fill pull-right">Thêm</button>
+                      <button type="submit" class="btn btn-info btn-fill pull-right">Add</button>
                       <div class="clearfix"></div>
                     </form>
                   </div>

@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Danh sách email cấu hình')
+@section('Title', 'Email Config')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -30,10 +30,10 @@
                     <div class="col-lg-12 grid-margin stretch-card p-0">
                       <div class="card">
                         <div class="card-body">
-                          <h4 class="card-title float-left">Danh sách email chiến dịch</h4>
+                          <h4 class="card-title float-left">Campaign Email List</h4>
                           <div class="float-right"> 
                            <a href="{{url("admin/chien-dich-email/gui-email/them")}}">
-                            <div class="btn btn-success">Tạo chiến dịch</div>
+                            <div class="btn btn-success">Create</div>
                           </a> 
                         </div>
                         <div style="clear: both;"></div>
@@ -42,12 +42,12 @@
                           <table class="table table-hover table-striped">
                             <thead>
                               <th>ID</th>
-                              <th>Tên</th>
-                              <th>Mẫu mail</th>
-                              <th>Tiến trình</th>
+                              <th>Name</th>
+                              <th>Template</th>
+                              <th>Progree</th>
                               <th>Type</th>
                               <th>Created</th>
-                              <th>Thao tác</th>
+                              <th>Method</th>
 
                             </thead>
                             <tbody>
@@ -61,9 +61,9 @@
                               </td>
                               <td>
                                 @if($item->type_send == 0)
-                                Gửi ngay
+                                Send now
                                 @else
-                                Đặt lịch
+                                Set time
                                 {{\Carbon\Carbon::parse($item->start_date)->setTimezone('Asia/Ho_Chi_Minh')->format('d/m/Y H:i:s')}}
               
                                 @endif
@@ -72,11 +72,11 @@
                               <td> {{\Carbon\Carbon::parse($item->created_at)->setTimezone('Asia/Ho_Chi_Minh')->format('d/m/Y H:i:s')}}</td>
                               <td>
                                 <a href="{{url('admin/chien-dich-email/gui-email/chi-tiet')."/".$item->id}}">
-                                  <button class="btn btn-primary">Xem chi tiết</button>
+                                  <button class="btn btn-primary">Detail</button>
                                </a>
                                @if($item->type_send == 1)
                                @if($item->total_receipt_mail == 0)
-                               <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$item->id}}">Xóa</button> 
+                               <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$item->id}}">Delete</button> 
                                @endif   
                                @endif
                              </td>
@@ -85,19 +85,19 @@
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Xóa mẫu email</h5>
+                                  <h5 class="modal-title" id="exampleModalLabel">Delete email template</h5>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                 <p>Bạn đồng ý xóa chiến dịch email này?</p>
+                                 <p>Do you agree to delete this email campaign?</p>
                                </div>
                                <div class="p-2">
-                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                  <a  href="{{url('/admin/chien-dich-email/gui-email/xoa')."/".$item->id}}">
                                   <button type="button" class="btn btn-danger float-right mr-2">
-                                    Đồng ý                   
+                                    OK                   
                                   </button>
                                 </a>
                                 <div style="clear: both"></div>

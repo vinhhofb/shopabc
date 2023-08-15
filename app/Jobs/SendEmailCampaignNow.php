@@ -46,7 +46,7 @@ class SendEmailCampaignNow implements ShouldQueue
 
 
 
-      //lấy mẫu mail gửi 
+      //lấy Template gửi 
       $getEmailTemplate = DB::table('admin_mail_template')
       ->where('id','=',$getEmailCampaign->mail_template_id)
       ->first();
@@ -55,15 +55,15 @@ class SendEmailCampaignNow implements ShouldQueue
 
       foreach ($getEmailCampaignDetail as $items) {
 
-        //lấy tên người nhận mail để replace
+        //lấy Name người nhận mail để replace
         $getNameUser = DB::table('users')
         ->where('users.email','=',$items->user_email)->first();
 
-        //chuyển %ten_nguoi_nhan% thành tên người nhận
+        //chuyển %User% thành Name người nhận
         //chuyển tiêu đề mail
-        $titleEmailReplace = str_replace("%ten_nguoi_nhan%", $getNameUser->name, $getEmailTemplate->template_title);
-        //chuyển nội dung mail
-        $contentEmailReplace = str_replace("%ten_nguoi_nhan%", $getNameUser->name, $getEmailTemplate->template_content);
+        $titleEmailReplace = str_replace("%User%", $getNameUser->name, $getEmailTemplate->template_title);
+        //chuyển Content mail
+        $contentEmailReplace = str_replace("%User%", $getNameUser->name, $getEmailTemplate->template_content);
        
         //lấy mail config
         $getEmailConfig = DB::table('admin_mail_config')
@@ -79,7 +79,7 @@ class SendEmailCampaignNow implements ShouldQueue
           ->setUsername($getEmailConfig->mail_username)->setPassword($getEmailConfig->mail_password)->setEncryption($getEmailConfig->mail_encryption);
           $mailer = new \Swift_Mailer($transport);
 
-        //thiết lập tiêu đề, nội dung mail gửi
+        //thiết lập tiêu đề, Content mail gửi
           $message = (new \Swift_Message($titleEmailReplace))
           ->setFrom($getEmailConfig->mail_username)
           ->setTo($items->user_email)
@@ -92,7 +92,7 @@ class SendEmailCampaignNow implements ShouldQueue
             //update trạng thái gửi thất bại
           DB::table('admin_mail_campaign_detail')->where('id', $items->id)->update(['receipt_status' => 2,'receipt_time' => strtotime('now'),]);
         }
-       //update trạng thái gửi thành công
+       //update trạng thái gửi Success
         DB::table('admin_mail_campaign_detail')->where('id', $items->id)->update(['receipt_status' => 1,'receipt_time' => strtotime('now'),]);
        //cộng vào số mail đã gửi trong chiến dịch
         $total_receipt_mail = DB::table('admin_mail_campaign')->where('id',$this->id)->first();

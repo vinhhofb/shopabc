@@ -1,15 +1,15 @@
 @extends("Shiper.Layouts.Master")
-@section('Title', 'Đăng ký giao hàng')
+@section('Title', 'Đăng ký Shiper')
 @section('Content')
 <link rel="stylesheet" href="{{ asset('index/css/reponsive.css') }}">
 <div class="box-content d-flex" style="padding-top: 60px;width: 80%;margin: auto;">
   <div class="form-login-box bg-white mt-3 p-3" style="width: 30%;margin: auto;">
-    <p class="text-center font-weight-bold mt-1 tx" style="font-size: 110%">ĐĂNG KÝ CỬA HÀNG</p>
+    <p class="text-center font-weight-bold mt-1 tx" style="font-size: 110%">ĐĂNG KÝ Store</p>
     <hr>
     <form id="signup-shiper-form" action="{{url('kenh-giao-hang/dang-ky')}}" method="post">
       @csrf
       <div>
-        <p class="fz95 mb-1 ">Nhập họ và tên</p>
+        <p class="fz95 mb-1 ">Nhập họ và Name</p>
         <input type="text" name="name" class="form-control w-100" required >
         <p class="fz95 mb-1 ">Nhập địa chỉ email</p>
         <input type="email" name="email" class="form-control w-100" required>

@@ -1,5 +1,5 @@
 @extends("Shop.Layouts.Master")
-@section('Title', 'Thông tin cá nhân')
+@section('Title', 'Information cá nhân')
 @section('Content')
 <div class="container-scroller">
   <!-- partial:partials/_navbar.html -->
@@ -29,7 +29,7 @@
                       <p class="font-weight-bold" style="font-size:120%">Basic information</p>
                       <div class="row m-0">
                         <div class="col-12 col-md-6 p-0 pr-2 mb-2 mt-3">
-                          <label class="fz95">Tên cửa hàng</label>
+                          <label class="fz95">Store Name</label>
                           <input type="text" value="{{Auth::user()->name}}" name="name" class="form-control mr-2">
                         </div>
                         <div class="col-12 col-md-6 p-0 pl-2 mb-2 mt-3">
@@ -41,7 +41,7 @@
                           <input type="email" value="{{Auth::user()->email}}" name="email" class="form-control mr-2">
                         </div>
                         <div class="col-12 col-md-6 p-0 pl-2 mb-2 mt-3">
-                          <label class="fz95">Ảnh đại diện</label>
+                          <label class="fz95">Image</label>
                           <input type="file" value="{{Auth::user()->email}}" name="avatar" class="form-control mr-2">
                         </div>
                         <div class="col-12 col-md-6 p-0 pr-2 mb-2 mt-3">

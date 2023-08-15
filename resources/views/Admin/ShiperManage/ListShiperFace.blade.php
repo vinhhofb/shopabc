@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Danh sách shiper')
+@section('Title', 'LIst shiper')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -30,12 +30,12 @@
                     <div class="col-lg-12 grid-margin stretch-card p-0">
                       <div class="card">
                         <div class="card-body">
-                         <h4 class="card-title float-left mb-0 mt-2">Danh sách tài khoản shiper</h4>
+                         <h4 class="card-title float-left mb-0 mt-2">Shiper List</h4>
                          <div class="float-right"> 
                           <form method="get" action="{{url('admin/quan-ly-shiper/tim-kiem')}}">    
                             <div class="form-group" style="display: flex">                                   
                               <input type="text" class="form-control"  placeholder="Your phone" value="" name="keyword" required>
-                              <button type="submit" class="btn btn-success ml-2">Tìm</button>
+                              <button type="submit" class="btn btn-success ml-2">Search</button>
 
                             </div>
                           </form> 
@@ -45,12 +45,12 @@
                         <div class="table-responsive">
                           <table class="table table-hover table-striped">
                             <thead>
-                              <th>Stt</th>
-                              <th>Tên người dùng</th>
+                              <th>code</th>
+                              <th>Username</th>
                               <th>Email</th>
                               <th>Phone</th>
                               <th>Status</th>
-                              <th>Thao tác</th>
+                              <th>Method</th>
                             </thead>
                             <tbody>
                              <p style="display: none">{{$id = 1}}</p>
@@ -60,14 +60,14 @@
 
                               <td>
                                 @if($GetShiper->name ==null)
-                                Chưa cập nhật
+                                Not update
                                 @else
                                 {{$GetShiper->name}}
                                 @endif
                               </td>
                               <td>
                                 @if($GetShiper->email ==null)
-                                Chưa cập nhật
+                                Not update
                                 @else
                                 {{$GetShiper->email}}
                                 @endif
@@ -105,10 +105,10 @@
                                    <p>Bạn muốn yêu cầu tài xế {{$GetShiper->name}} nhận diện lại khuôn mặt?</p>
                                  </div>
                                  <div class="p-2">
-                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                    <a  href="{{url('admin/nhan-dien-guong-mat/nhan-dien-lai')."/".$GetShiper->id}}">
                                     <button type="button" class="btn btn-danger float-right mr-2">
-                                      Đồng ý                    
+                                      OK                    
                                     </button>
                                   </a>
 

@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Danh sách người dùng')
+@section('Title', 'User list')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -30,12 +30,12 @@
                     <div class="col-lg-12 grid-margin stretch-card p-0">
                       <div class="card">
                         <div class="card-body">
-                         <h4 class="card-title float-left mb-0 mt-2">Danh sách tài khoản người dùng</h4>
+                         <h4 class="card-title float-left mb-0 mt-2">List of user accounts</h4>
                          <div class="float-right"> 
                           <form method="get" action="{{url('admin/quan-ly-nguoi-dung/tim-kiem')}}">    
                             <div class="form-group" style="display: flex">                                 
                               <input type="number" class="form-control"  placeholder="Your phone" name="keyword" required>
-                              <button type="submit" class="btn btn-success ml-2">Tìm</button>
+                              <button type="submit" class="btn btn-success ml-2">Search</button>
 
                             </div>
                           </form> 
@@ -45,13 +45,13 @@
                         <div class="table-responsive">
                           <table class="table table-hover table-striped">
                             <thead>
-                              <th>Stt</th>
-                              <th>Tên người dùng</th>
-                              <th>Số dư</th>
+                              <th>code</th>
+                              <th>Username</th>
+                              <th>Balance</th>
                               <th>Phone</th>
                               <th>Status</th>
 
-                              <th>Thao tác</th>
+                              <th>Method</th>
                             </thead>
                             <tbody>
                              <p style="display: none">{{$id = 1}}</p>
@@ -61,29 +61,29 @@
 
                               <td>
                                 @if($GetUser->name ==null)
-                                Chưa cập nhật
+                                Not update
                                 @else
                                 {{$GetUser->name}}
                                 @endif
                               </td>
                               <td>
-                                {{number_format($GetUser->balance)}}đ
+                                {{number_format($GetUser->balance)}}$
                               </td>
                               <td>{{$GetUser->phone}}</td>
 
                               <td>
                                 @if($GetUser->active == 1)
-                                Đang hoạt động
+                                Active
                                 @elseif($GetUser->active == 0)
-                                Tạm khóa
+                                Hiden
                                 @endif
                               </td>
                               <td>
 
                                 @if($GetUser->active == 1)
-                                <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetUser->id}}">Tạm khóa</button>
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetUser->id}}">Hiden</button>
                                 @elseif($GetUser->active == 0)
-                                <button class="btn btn-success"  data-toggle="modal" data-target="#exampleModalUnLock{{$GetUser->id}}">Mở khóa</button>
+                                <button class="btn btn-success"  data-toggle="modal" data-target="#exampleModalUnLock{{$GetUser->id}}">Unlock</button>
                                 @endif                              
                               </td>
                             </tr>
@@ -91,19 +91,19 @@
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Khóa người dùng</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Block account</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                   <p>Khi bạn khóa {{$GetUser->name}}, {{$GetUser->name}} sẽ không thể đăng nhập và thực hiện các chức năng của người dùng.</p>
+                                   <p>When you lock {{$GetUser->name}}, {{$GetUser->name}} sẽ không thể đăng nhập và thực hiện các chức năng của người dùng.</p>
                                  </div>
                                  <div class="p-2">
-                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                    <a  href="{{url('admin/quan-ly-nguoi-dung/khoa-mo-nguoi-dung')."/".$GetUser->id}}">
                                     <button type="button" class="btn btn-danger float-right mr-2">
-                                      Khóa                    
+                                      Lock                    
                                     </button>
                                   </a>
 
@@ -118,19 +118,19 @@
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Mở khóa người dùng</h5>
+                                  <h5 class="modal-title" id="exampleModalLabel">Unlock user</h5>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                 <p>Khi bạn mở khóa {{$GetUser->name}}, {{$GetUser->name}} sẽ có thể đăng nhập và sử dụng các chức năng của người dùng.</p>
+                                 <p>When Unlock {{$GetUser->name}}, {{$GetUser->name}} will be able to login and use user functions.</p>
                                </div>
                                <div class="p-2">
-                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                  <a  href="{{url('admin/quan-ly-nguoi-dung/khoa-mo-nguoi-dung')."/".$GetUser->id}}">
                                   <button type="button" class="btn btn-success float-right mr-2">
-                                    Mở khóa                    
+                                    Unlock                    
                                   </button>
                                 </a>
 

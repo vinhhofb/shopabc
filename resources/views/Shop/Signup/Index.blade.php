@@ -1,10 +1,10 @@
 @extends("Shop.Layouts.Master")
-@section('Title', 'Đăng ký cửa hàng')
+@section('Title', 'Đăng ký Store')
 @section('Content')
 <link rel="stylesheet" href="{{ asset('index/css/reponsive.css') }}">
 <div class="box-content d-flex" style="padding-top: 60px;width: 80%;margin: auto;">
   <div class="form-login-box bg-white mt-3 p-3" style="width: 30%;margin: auto;">
-    <p class="text-center font-weight-bold mt-1 tx" style="font-size: 110%">ĐĂNG KÝ CỬA HÀNG</p>
+    <p class="text-center font-weight-bold mt-1 tx" style="font-size: 110%">ĐĂNG KÝ Store</p>
     <hr>
     <form  id="signup-user-form" action="{{url('kenh-cua-hang/dang-ky')}}" method="post">
       @csrf

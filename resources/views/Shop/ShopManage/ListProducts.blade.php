@@ -1,5 +1,5 @@
 @extends("Shop.Layouts.Master")
-@section('Title', 'Danh sách sản phẩm')
+@section('Title', 'Product List')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -30,11 +30,11 @@
                       <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card">
                           <div class="card-body">
-                           <p class="font-weight-bold float-left" style="font-size:120%">Danh sách sản phẩm</p>
+                           <p class="font-weight-bold float-left" style="font-size:120%">Product List</p>
                            <div class="float-right"> 
                              <div class="d-flex">
                                <a class="mr-2" href="{{url('kenh-cua-hang/quan-ly-cua-hang/them-san-pham')."/".$IdShop}}">
-                                <div class="btn btn-success">Thêm cửa hàng</div>
+                                <div class="btn btn-success">Add store</div>
                               </a>
                               
                             </div> 
@@ -49,19 +49,19 @@
                                     Code
                                   </th>
                                   <th width="300px">
-                                    Tên sản phẩm
+                                    Product Name
                                   </th>
                                   <th>
-                                    Ảnh
+                                    Image
                                   </th>
                                   <th>
-                                    Thông tin
+                                    Information
                                   </th>
                                   <th>
                                     Status
                                   </th>
                                   <th>
-                                    Thao tác
+                                    Method
                                   </th>
                                 </tr>
                               </thead>
@@ -82,26 +82,26 @@
                                     @endif
                                   </td>
                                   <td width="20%">
-                                    <p>{{number_format($GetProductByShop->price)}}đ / {{$GetProductByShop->unit}}</p>
-                                    <p class="mt-2">Số lượng: {{$GetProductByShop->quanlity}}</p>
+                                    <p>{{number_format($GetProductByShop->price)}}$ / {{$GetProductByShop->unit}}</p>
+                                    <p class="mt-2">Quantity: {{$GetProductByShop->quanlity}}</p>
                                     <p class="mt-2">Selled: {{$GetProductByShop->count_sale}}</p>
                                     
                                   </td>
                                   <td width="15%">
                                     @if($GetProductByShop->active == 1)
-                                    <p class="text-success">Đang hoạt động</p>
+                                    <p class="text-success">Active</p>
                                     @elseif($GetProductByShop->active == 0)
-                                    <p class="text-danger">Tạm hết</p>
+                                    <p class="text-danger">Sold</p>
                                     @endif
                                   </td>
                                   <td>                                                                 
                                     @if($GetProductByShop->active == 1)
-                                    <div class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetProductByShop->id}}">Tạm hết</div>
+                                    <div class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetProductByShop->id}}">Sold</div>
                                     @elseif($GetProductByShop->active == 0)
-                                    <div class="btn btn-success" data-toggle="modal" data-target="#exampleModalUnLock{{$GetProductByShop->id}}">Hiển thị</div>
+                                    <div class="btn btn-success" data-toggle="modal" data-target="#exampleModalUnLock{{$GetProductByShop->id}}">Show</div>
                                     @endif 
                                     <a href="">
-                                      <div class="btn btn-primary mt-2">Giảm giá</div>   
+                                      <div class="btn btn-primary mt-2">DIscount</div>   
                                     </a>
                                   </td>
                                 </tr>
@@ -109,19 +109,19 @@
                                   <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                       <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Tạm hết sản phẩm {{$GetProductByShop->name}}</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Sold Products {{$GetProductByShop->name}}</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                           <span aria-hidden="true">&times;</span>
                                         </button>
                                       </div>
                                       <div class="modal-body">
-                                        <p>Khi bạn tạm hết sản phẩm "{{$GetProductByShop->name}}", "{{$GetProductByShop->name}}" sẽ bị ẩn khỏi trang chủ cho đến khi bạn mở lại.</p>
+                                        <p>When you run out Products "{{$GetProductByShop->name}}", "{{$GetProductByShop->name}}" will be hidden from the homepage until you reopen it.</p>
                                       </div>
                                       <div class="p-2">
-                                       <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                       <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                        <a  href="{{url('kenh-cua-hang/quan-ly-cua-hang/khoa-mo-san-pham')."/".$GetProductByShop->id}}">
                                         <button type="button" class="btn btn-danger float-right mr-2">
-                                          Đồng ý                 
+                                          OK                 
                                         </button>
                                       </a>
 
@@ -143,13 +143,13 @@
                                       </button>
                                     </div>
                                     <div class="modal-body">
-                                     <p>Khi bạn mở trạng thái có sẵn sản phẩm {{$GetProductByShop->name}}, {{$GetProductByShop->name}} sẽ hiển thị trở lại tại trang chủ.</p>
+                                     <p>Khi bạn mở trạng thái có sẵn Products {{$GetProductByShop->name}}, {{$GetProductByShop->name}} Will show back at home page.</p>
                                    </div>
                                    <div class="p-2">
-                                     <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                     <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                      <a  href="{{url('kenh-cua-hang/quan-ly-cua-hang/khoa-mo-san-pham')."/".$GetProductByShop->id}}">
                                       <button type="button" class="btn btn-success float-right mr-2">
-                                       Đồng ý                  
+                                       OK                  
                                      </button>
                                    </a>
                                    <div style="clear: both"></div>

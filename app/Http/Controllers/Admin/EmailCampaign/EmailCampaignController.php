@@ -19,7 +19,7 @@ class EmailCampaignController extends Controller
         DB::table('admin_mail_campaign')->where('id',$id)->update(['is_deleted'=>1]);
         return back();
     }
-    //tạo chiến dịch cho filter user
+    //Create cho filter user
     public function PostAddEmailCampaignTypeUser(Request $request){    
       
         $checkIdTemplate = DB::table('admin_mail_template')
@@ -49,7 +49,7 @@ class EmailCampaignController extends Controller
            'mail_template_id'=>'required|integer',
            'start_date' => 'required',
        ]); 
-        //gửi ngay    
+        //Send now    
     }else{
         $type_send="send_now";
         $validate = $request->validate([
@@ -57,10 +57,10 @@ class EmailCampaignController extends Controller
            'mail_template_id'=>'required|integer',
        ]);
     }
-         //đặt lịch cronjob
+         //Set time cronjob
     if($type_send =="send_set_time"){
 
-            //ngày giờ đặt lịch lấy từ input chuyển sang unixtime
+            //ngày giờ Set time lấy từ input chuyển sang unixtime
         $datetime = date(strtotime($request->start_date));
             //insert chiến dịch vào bảng admin_mail_campaign và lấy ra id vừa insert
         $insertGetId = DB::table('admin_mail_campaign')->insertGetId(
@@ -185,7 +185,7 @@ public function PostEditEmailConfig($id, Request $request){
     }
     catch (\Swift_TransportException $transportExp){
 
-        return redirect()->back()->with('msg', 'Thông tin thiết lập không chính xác, vui lòng kiểm tra lại');
+        return redirect()->back()->with('msg', 'Information thiết lập không chính xác, vui lòng kiểm tra lại');
     }   
 }
 
@@ -217,7 +217,7 @@ public function AddEmailCampaign(){
     return view('Admin.EmailCampaign.AddEmailCampaign',['listUser'=>$listUser,'listTemplate'=>$listTemplate]);
 }
 public function PostAddEmailCampaignListUser(Request $request){
-        //tạo chiến dịch cho list user
+        //Create cho list user
     $checkIdTemplate = DB::table('admin_mail_template')
     ->where('admin_mail_template.id',$request->mail_template_id)
     ->where('admin_mail_template.is_deleted',0)
@@ -236,7 +236,7 @@ public function PostAddEmailCampaignListUser(Request $request){
            'mail_template_id'=>'required|integer',
            'start_date' => 'required' 
        ]); 
-        //gửi ngay    
+        //Send now    
     }else{
         $type_send="send_now";
         $validate = $request->validate([
@@ -244,9 +244,9 @@ public function PostAddEmailCampaignListUser(Request $request){
            'mail_template_id'=>'required|integer',
        ]);
     }
-        //đặt lịch cronjob
+        //Set time cronjob
     if($type_send =="send_set_time"){
-            //ngày giờ đặt lịch lấy từ input chuyển sang unixtime
+            //ngày giờ Set time lấy từ input chuyển sang unixtime
         $datetime = date(strtotime($request->start_date));
             //insert chiến dịch vào bảng admin_mail_campaign và lấy ra id vừa insert
         $insertGetId = DB::table('admin_mail_campaign')->insertGetId(
@@ -379,7 +379,7 @@ public function PostAddEmailConfig(Request $request){
     }
     catch (\Swift_TransportException $transportExp){
 
-        return redirect()->back()->with('msg', 'Thông tin thiết lập không chính xác, vui lòng kiểm tra lại');
+        return redirect()->back()->with('msg', 'Information thiết lập không chính xác, vui lòng kiểm tra lại');
     }   
 }
 public function ListEmailConfig(){

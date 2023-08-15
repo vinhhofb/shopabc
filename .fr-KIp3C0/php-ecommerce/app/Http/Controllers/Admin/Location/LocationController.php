@@ -45,7 +45,7 @@ class LocationController extends Controller
     }
     public function DeleteCity($id){
         $DeleteCity = DB::table('city')->where('id', $id)->delete();
-        return Redirect::back()->with('msg', 'Xóa thành công');
+        return Redirect::back()->with('msg', 'Delete Success');
     }
 
     public function EditCity($id){
@@ -90,7 +90,7 @@ class LocationController extends Controller
 
     public function DeleteMarket($id){
         $DeleteMarket = DB::table('market')->where('id', $id)->delete();
-        return Redirect::back()->with('msg', 'Xóa thành công');
+        return Redirect::back()->with('msg', 'Delete Success');
     }
 
 

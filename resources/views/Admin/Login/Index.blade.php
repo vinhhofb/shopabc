@@ -10,7 +10,7 @@
       @csrf
       <p class="text-center font-weight-bold mt-1 tx" style="font-size: 110%">LOGIN ADMIN</p>
       <hr>
-      <p class="fz95 mb-0">Tên tài khoản</p>
+      <p class="fz95 mb-0">Name</p>
       <input type="text" name="name" class="form-control w-100" required>
       <p class="fz95 mt-2 mb-0">Password</pl>
       <input type="password" name="password" class="form-control w-100" required>

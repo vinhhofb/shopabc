@@ -87,10 +87,10 @@
                             @if($getCart->shiper_id ==null && $getCart->status ==1) 
                             Tìm người giao
                             @elseif($getCart->shiper_id !=null && $getCart->status ==1)
-                            Đang giao hàng
+                            Đang Shiper
                             @endif
                             @if($getCart->status ==3) 
-                            Đã giao hàng
+                            Đã Shiper
                             @endif
                           </p>
                           <div class="clboth"></div>

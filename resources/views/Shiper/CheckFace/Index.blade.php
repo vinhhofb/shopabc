@@ -115,7 +115,7 @@ async function recognizeFaces() {
       })
       
       if(results.length >0 && results[0]._label == $('#name-auth').text()){
-        $('#status').text('Nhận diện thành công')
+        $('#status').text('Nhận diện Success')
         console.log(results[0]._label);
         window.location.href = "{{url('kenh-giao-hang/xac-nhan-thanh-cong')}}";
       }else{

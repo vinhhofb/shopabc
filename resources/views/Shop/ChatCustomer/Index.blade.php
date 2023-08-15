@@ -1,5 +1,5 @@
 @extends("Shop.Layouts.Master")
-@section('Title', 'Tư vấn khách hàng')
+@section('Title', 'Tư vấn Customer')
 @section('Content')
 <div class="container-scroller">
   <x-shop.layouts.header-dashboard/>
@@ -19,7 +19,7 @@
                   <div>
                    
                      <div class="bg-white p-3">
-                      <p class="font-weight-bold" style="font-size:120%">Tư vấn khách hàng</p>
+                      <p class="font-weight-bold" style="font-size:120%">Tư vấn Customer</p>
                       <iframe src="http://marketonline2.com/chatify" style="height:500px;width: 100%;border:0;"></iframe>
                       
                     </div>

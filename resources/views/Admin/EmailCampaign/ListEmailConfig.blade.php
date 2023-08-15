@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Danh sách email cấu hình')
+@section('Title', 'Email Config')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -30,10 +30,10 @@
                     <div class="col-lg-12 grid-margin stretch-card p-0">
                       <div class="card">
                         <div class="card-body">
-                          <h4 class="card-title float-left">Danh sách email cấu hình</h4>
+                          <h4 class="card-title float-left">Email Config</h4>
                           <div class="float-right"> 
                            <a href="{{url("admin/chien-dich-email/cau-hinh-email/them")}}">
-                            <div class="btn btn-success">Thêm email cấu hình</div>
+                            <div class="btn btn-success">Add email template</div>
                           </a> 
                         </div>
                         <div style="clear: both;"></div>
@@ -44,7 +44,7 @@
                               <th>ID</th>
                               <th width="17%">Email</th>
                               <th>Host</th>
-                              <th>Cổng</th>
+                              <th>Port</th>
                              
                               <th>Type</th>
                             </thead>
@@ -59,21 +59,21 @@
                        
                               <td>
                                @if($item->type_email == 0)
-                               Email phụ
+                               Email Normal
                                @else
-                               Email chính
+                               Email Mater
                                @endif
                              </td>
                              <td>
                               @if($item->type_email == 0)
                               <a href="{{url('/admin/chien-dich-email/cau-hinh-email/dat-lam-email-chinh')."/".$item->id}}">
-                                <button class="btn btn-primary">Đặt làm email chính</button>    
+                                <button class="btn btn-primary">Set Email Master</button>    
                               </a>
                               @endif
                               <a href="{{url('/admin/chien-dich-email/cau-hinh-email/sua')."/".$item->id}}">
-                                <button class="btn btn-primary">Sửa</button>    
+                                <button class="btn btn-primary">Edit</button>    
                               </a>
-                              <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$item->id}}">Xóa</button>    
+                              <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$item->id}}">Delete</button>    
 
                             </td>
                           </tr>
@@ -81,19 +81,19 @@
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Xóa mẫu email</h5>
+                                  <h5 class="modal-title" id="exampleModalLabel">Delete email template</h5>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                 <p>Bạn đồng ý xóa mẫu email này?</p>
+                                 <p>Do you agree to delete this email template?</p>
                                </div>
                                <div class="p-2">
-                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                  <a  href="{{url('/admin/chien-dich-email/cau-hinh-email/xoa')."/".$item->id}}">
                                   <button type="button" class="btn btn-danger float-right mr-2">
-                                    Đồng ý                   
+                                    OK                   
                                   </button>
                                 </a>
                                 <div style="clear: both"></div>

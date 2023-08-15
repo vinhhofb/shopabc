@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Sửa email cấu hình')
+@section('Title', 'Edit email config')
 @section('Content')
 <div class="container-scroller">
   <x-admin.layouts.header-dashboard/>
@@ -17,16 +17,16 @@
               <div class="col-12 col-xl-12 mb-4 mb-xl-0 p-0">
                 <div>
                   <div class="bg-white p-4">
-                    <h4 class="mb-4">Sửa email cấu hình</h4>
+                    <h4 class="mb-4">Edit email config</h4>
                     <form method="post" action="{{url('admin/chien-dich-email/cau-hinh-email/sua')."/".$id}}">
                       @csrf
                       <div class="row m-0">
                         <div class="col-12 p-0 mb-2">
-                          <label class="fz95">Máy chủ email</label>
+                          <label class="fz95">Server</label>
                           <input type="text" name="mail_host" class="form-control mr-2" value="{{$GetEmailConfig->mail_host}}" required>
                         </div>
                         <div class="col-12 p-0 mb-2">
-                          <label class="fz95">Cổng</label>
+                          <label class="fz95">Port</label>
                           <input type="text" name="mail_port" class="form-control mr-2" value="{{$GetEmailConfig->mail_port}}" required>
                         </div>
                         <div class="col-12 p-0 mb-2">
@@ -34,7 +34,7 @@
                           <input type="text" name="mail_username" class="form-control mr-2" value="{{$GetEmailConfig->mail_username}}" required>
                         </div> 
                         <div class="col-12 p-0 mb-2">
-                          <label class="fz95">Mật khẩu(domain) / mật khẩu ứng dụng(gmail)</label>
+                          <label class="fz95">Password (domain) / Password app(gmail)</label>
                           <input type="text" name="mail_password" class="form-control mr-2" value="{{$GetEmailConfig->mail_password}}" required>
                         </div>  
                         <div class="col-12 p-0  text-center">
@@ -43,7 +43,7 @@
                           @endif
                         </div>
                         <div class="col-12 p-0 pr-2 mb-2 text-center mt-3">
-                          <button class="btn bg text-white">Sửa</button>
+                          <button class="btn bg text-white">Edit</button>
                         </div>
                       </div>
                     </form>

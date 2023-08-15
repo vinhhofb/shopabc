@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Danh sách shiper')
+@section('Title', 'List shiper')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -30,12 +30,12 @@
                       <div class="col-lg-12 grid-margin stretch-card p-0">
                         <div class="card">
                           <div class="card-body">
-                           <h4 class="card-title float-left mb-0 mt-2">Danh sách tài khoản shiper</h4>
+                           <h4 class="card-title float-left mb-0 mt-2">Shiper List</h4>
                            <div class="float-right"> 
                           <form method="get" action="{{url('admin/quan-ly-shiper/tim-kiem')}}">    
                             <div class="form-group" style="display: flex">                                   
                               <input type="text" class="form-control"  placeholder="Your phone" value="" name="keyword" required>
-                              <button type="submit" class="btn btn-success ml-2">Tìm</button>
+                              <button type="submit" class="btn btn-success ml-2">Search</button>
 
                             </div>
                           </form> 
@@ -45,12 +45,12 @@
                           <div class="table-responsive">
                             <table class="table table-hover table-striped">
                             <thead>
-                              <th>Stt</th>
-                              <th>Tên người dùng</th>
+                              <th>code</th>
+                              <th>Username</th>
                               <th>Email</th>
                               <th>Phone</th>
                               <th>Status</th>
-                              <th>Thao tác</th>
+                              <th>Method</th>
                             </thead>
                             <tbody>
                              <p style="display: none">{{$id = 1}}</p>
@@ -60,14 +60,14 @@
 
                               <td>
                                 @if($GetShiper->name ==null)
-                                Chưa cập nhật
+                                Not update
                                 @else
                                 {{$GetShiper->name}}
                                 @endif
                               </td>
                               <td>
                                 @if($GetShiper->email ==null)
-                                Chưa cập nhật
+                                Not update
                                 @else
                                 {{$GetShiper->email}}
                                 @endif
@@ -76,17 +76,17 @@
 
                               <td>
                                 @if($GetShiper->active == 1)
-                                Đang hoạt động
+                                Active
                                 @elseif($GetShiper->active == 0)
-                                Tạm khóa
+                                Hiden
                                 @endif
                               </td>
                               <td>
                                 {{--   <button class="btn btn-success mr-2">Xem đơn</button> --}}
                                 @if($GetShiper->active == 1)
-                                <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetShiper->id}}">Tạm khóa</button>
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetShiper->id}}">Hiden</button>
                                 @elseif($GetShiper->active == 0)
-                                <button class="btn btn-success"  data-toggle="modal" data-target="#exampleModalUnLock{{$GetShiper->id}}">Mở khóa</button>
+                                <button class="btn btn-success"  data-toggle="modal" data-target="#exampleModalUnLock{{$GetShiper->id}}">Unlock</button>
                                 @endif                              
                               </td>
                             </tr>
@@ -94,19 +94,19 @@
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Khóa shiper</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Lock shiper</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                   <p>Khi bạn khóa {{$GetShiper->name}}, {{$GetShiper->name}} sẽ không thể đăng nhập và thực hiện các chức năng của shiper.</p>
+                                   <p>When you lock {{$GetShiper->name}}, {{$GetShiper->name}} will not be able to log in and perform shiper functions.</p>
                                  </div>
                                  <div class="p-2">
-                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                    <a  href="{{url('admin/quan-ly-shiper/khoa-mo-shiper')."/".$GetShiper->id}}">
                                     <button type="button" class="btn btn-danger float-right mr-2">
-                                      Khóa                    
+                                      Lock                    
                                     </button>
                                   </a>
 
@@ -121,19 +121,19 @@
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Mở khóa Shiper</h5>
+                                  <h5 class="modal-title" id="exampleModalLabel">Unlock Shiper</h5>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                 <p>Khi bạn mở khóa {{$GetShiper->name}}, {{$GetShiper->name}} sẽ có thể đăng nhập và sử dụng các chức năng của shiper.</p>
+                                 <p>When Unlock {{$GetShiper->name}}, {{$GetShiper->name}} will be able to login and use shiper functions.</p>
                                </div>
                                <div class="p-2">
-                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                  <a  href="{{url('admin/quan-ly-shiper/khoa-mo-shiper')."/".$GetShiper->id}}">
                                   <button type="button" class="btn btn-success float-right mr-2">
-                                    Mở khóa                    
+                                    Unlock                    
                                   </button>
                                 </a>
 

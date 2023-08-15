@@ -61,7 +61,7 @@
                                 <td>{{\Carbon\Carbon::parse($getPayment->created_at)->format('d/m/Y')}}</td>
                               </tr>
                               @empty
-                              <span>Chưa có dữ liệu</span>
+                              <span>No data yet</span>
                               @endforelse
 
                             </tbody>

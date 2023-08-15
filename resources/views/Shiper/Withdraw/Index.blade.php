@@ -25,7 +25,7 @@
                           <div class="col-3 p-0 pr-2 mb-2 pr-3">
                             <div class="bg text-white p-2">
                               <p>Balance</p>
-                              <p class="font-weight-bold float-right mb-0">{{number_format(Auth::user()->balance)}}đ</p>
+                              <p class="font-weight-bold float-right mb-0">{{number_format(Auth::user()->balance)}}$</p>
                               <div class="clboth"></div>
                             </div>
                           </div>
@@ -33,7 +33,7 @@
                             <label class="fz95">Nhập số tiền cần rút</label>
                             <div class="d-flex">
                               <input type="number" name="amount" min="50000" max="{{Auth::user()->balance}}" class="form-control mr-2" required>
-                              <button class="btn bg text-white" style="width: 30%;">Đồng ý</button>
+                              <button class="btn bg text-white" style="width: 30%;">OK</button>
                             </div>
                           </div>
                         </div>

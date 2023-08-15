@@ -4,7 +4,7 @@
             <div class="mr-4" style="width: 220px;height: 35px;">
                 <a href="{{route('index.Home.index')}}" class="d-flex">
                     <p class="mr-2 tx" style="font-size:120%;font-weight: bold;">VMARKET</p>
-                    <span class="tx" style="font-size: 80%;margin-top: 6px;">Kênh giao hàng</span>
+                    <span class="tx" style="font-size: 80%;margin-top: 6px;">Kênh Shiper</span>
                 </a>
             </div>
         </div>

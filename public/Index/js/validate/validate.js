@@ -95,7 +95,7 @@ $("#signup-shiper-form").validate({
     },
     messages: {
         name: {
-            required: "Vui lòng nhập họ và tên",
+            required: "Vui lòng nhập họ và Name",
         },
         email: {
             required: "Vui lòng nhập email",
@@ -185,7 +185,7 @@ $("#login-admin-form").validate({
 //             minlength: "Title thư từ 1 đến 255 ký tự"
 //         },
 //         content: {
-//             required: "Vui lòng nhập nội dung",
+//             required: "Vui lòng nhập Content",
 //             maxlength: "Title thư từ 1 đến 25000 ký tự",
 //             minlength: "Title thư từ 1 đến 25000 ký tự"
 //         },
@@ -193,7 +193,7 @@ $("#login-admin-form").validate({
 //     submitHandler: function(form) { 
 //        var content = tinyMCE.activeEditor.getContent();
 //        if (content === "" || content === null) {
-//         $("#editerInput").html('<label class="error" for="news_description">Vui lòng nhập nội dung</label>');
+//         $("#editerInput").html('<label class="error" for="news_description">Vui lòng nhập Content</label>');
 //         notitication();
 //     } else {
 //         $("#editerInput").html("");
@@ -235,9 +235,9 @@ $("#login-admin-form").validate({
 //     },
 //     messages: {
 //         campaign_name: {
-//             required: "Vui lòng nhập tên chiến dịch",
-//             maxlength: "Tên chiến dịch từ 1 đến 255 ký tự",
-//             minlength: "Tên chiến dịch từ 1 đến 255 ký tự",
+//             required: "Vui lòng nhập Name",
+//             maxlength: "Name từ 1 đến 255 ký tự",
+//             minlength: "Name từ 1 đến 255 ký tự",
 //             digits:"Vui lòng nhập đúng định dạng"
 //         },
 //         start_time_hour: {
@@ -333,14 +333,14 @@ $("#add-mail-config").validate({
             minlength: "Title email từ 1 đến 250 ký tự"
         },
         mail_port: {
-            required: "Vui lòng nhập cổng",
-            max: "Cổng có giá trị từ 0 đến 100000",
-            min: "Cổng có giá trị từ 0 đến 100000"
+            required: "Vui lòng nhập Port",
+            max: "Port có giá trị từ 0 đến 100000",
+            min: "Port có giá trị từ 0 đến 100000"
         },
         mail_username: {
-            required: "Vui lòng nhập tên đăng nhập",
-            maxlength: "Tên đăng nhập từ 1 đến 250 ký tự",
-            minlength: "Tên đăng nhập từ 1 đến 250 ký tự"
+            required: "Vui lòng nhập Name đăng nhập",
+            maxlength: "Name đăng nhập từ 1 đến 250 ký tự",
+            minlength: "Name đăng nhập từ 1 đến 250 ký tự"
         },
         mail_password: {
             required: "Vui lòng nhập mật khẩu",
@@ -386,7 +386,7 @@ $("#add-mail-config").validate({
 //             minlength: "Title email từ 1 đến 250 ký tự"
 //         },
 //         template_content: {
-//             required: "Vui lòng nhập nội dung",
+//             required: "Vui lòng nhập Content",
 //             maxlength: "Title email từ 1 đến 3000 ký tự",
 //             minlength: "Title email từ 1 đến 3000 ký tự"
 //         }
@@ -394,7 +394,7 @@ $("#add-mail-config").validate({
 //     submitHandler: function(form) { 
 //        var content = tinyMCE.activeEditor.getContent();
 //        if (content === "" || content === null) {
-//         $("#editerInput").html('<label class="error" for="news_description">Vui lòng nhập nội dung</label>');
+//         $("#editerInput").html('<label class="error" for="news_description">Vui lòng nhập Content</label>');
 //         notitication();
 //     } else {
 //         $("#editerInput").html("");
@@ -489,79 +489,79 @@ $("#add-mail-config").validate({
 
 //     messages: {
 //         tenduan: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
 //         giaban: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
 //         huongnha: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
 //         mohinh: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
 //         giathue: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
 //         quymo: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
 //         chudautu: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
 //         dientich: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
 //         hotrovay: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
 //         vitri: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
 //         phaply: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
 //         duong: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
 //         tinhtrang: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
 //         noithat: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
 //         dangngay: {
-//             required: "Vui lòng nhập nội dung",
-//             maxlength: "Nội dung gồm 3 đến 100 ký tự",
-//             minlength: "Nội dung gồm 3 đến 100 ký tự",
+//             required: "Vui lòng nhập Content",
+//             maxlength: "Content gồm 3 đến 100 ký tự",
+//             minlength: "Content gồm 3 đến 100 ký tự",
 //         },
         
 //     },
@@ -618,9 +618,9 @@ $("#add-mail-config").validate({
 //     },
 //     messages: {
 //         ngattrang: {
-//             required: "Vui lòng nhập số tin hiển thị",
-//             max: "Số tin hiển thị từ 1 đến 255",
-//             min: "Số tin hiển thị từ 1 đến 255",
+//             required: "Vui lòng nhập số tin Show",
+//             max: "Số tin Show từ 1 đến 255",
+//             min: "Số tin Show từ 1 đến 255",
 //             digits:"Nhập một số nguyên",
 //         },
 //         icon1: {
@@ -812,9 +812,9 @@ $("#add-mail-config").validate({
 //     },
 //     messages: {
 //         ngatbinhluandanhgia: {
-//             required: "Vui lòng nhập số đánh giá hiển thị",
-//             max: "Số đánh giá hiển thị từ 1 đến 255",
-//             min: "Số đánh giá hiển thị từ 1 đến 255",
+//             required: "Vui lòng nhập số đánh giá Show",
+//             max: "Số đánh giá Show từ 1 đến 255",
+//             min: "Số đánh giá Show từ 1 đến 255",
 //             digits: "Vui lòng nhập số nguyên"
 //         },
 //         songuoibaocao: {

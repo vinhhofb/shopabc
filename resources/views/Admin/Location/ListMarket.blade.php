@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Quản lý chợ')
+@section('Title', 'Market manage')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -28,10 +28,10 @@
                     <div class="col-lg-12 grid-margin stretch-card p-0">
                       <div class="card">
                         <div class="card-body">
-                         <h4 class="card-title float-left mt-2 mb-0">Danh sách chợ</h4>
+                         <h4 class="card-title float-left mt-2 mb-0">Market List</h4>
                          <div class="float-right">
                           <a href="{{url('admin/quan-ly-dia-diem/them-cho')."/".$IdCity}}">
-                            <button type="submit" class="btn btn-success ml-2">Thêm chợ</button>
+                            <button type="submit" class="btn btn-success ml-2">Add</button>
                           </a>
                         </div>
                         <div style="clear: both;"></div>
@@ -39,11 +39,11 @@
                         <div class="table-responsive">
                           <table class="table table-hover table-striped">
                             <thead>
-                              <th>Stt</th>
-                              <th>Hình đại diện</th>
-                              <th>Tên chợ</th>
+                              <th>code</th>
+                              <th>Image</th>
+                              <th>name</th>
                               {{--        <th>Address</th> --}}
-                              <th>Thao tác</th>
+                              <th>Method</th>
                             </thead>
                             <tbody>
                              <p style="display: none">{{$id = 1}}</p>
@@ -69,28 +69,28 @@
                                   <button class="btn btn-success mr-2">See store</button> 
                                 </a>
                                 <a href="{{url('admin/quan-ly-dia-diem/sua-cho'."/".$GetMarketByCity->id)}}">
-                                  <button class="btn btn-primary mr-2">Sửa</button> 
+                                  <button class="btn btn-primary mr-2">Edit</button> 
                                 </a>
-                                <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetMarketByCity->id}}">Xóa</button>                                                                         
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetMarketByCity->id}}">Delete</button>                                                                         
                               </td>
                             </tr>
                             <div class="modal fade mt-5" id="exampleModalBlock{{$GetMarketByCity->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Xóa thành phố</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                   <p>Khi bạn xóa {{$GetMarketByCity->name}}, All cả dữ liệu bao gồm shop, sản phẩm bên trong {{$GetMarketByCity->name}} sẽ bị xóa.</p>
+                                   <p>When delete {{$GetMarketByCity->name}}, All all shopshop, Products inside {{$GetMarketByCity->name}} Will delete</p>
                                  </div>
                                  <div class="p-2">
-                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                    <a href="{{url('admin/quan-ly-dia-diem/xoa-cho')."/".$GetMarketByCity->id}}">
                                     <button type="button" class="btn btn-danger float-right mr-2">
-                                      Xóa                   
+                                      Delete                   
                                     </button>
                                   </a>
 

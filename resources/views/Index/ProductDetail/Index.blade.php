@@ -145,12 +145,12 @@ Add to cart</div>
 
   </div>
   <div class="bg-white mt-3 p-3">
-    <p class="font-weight-bold mb-3">Thông tin chi tiết</p>
+    <p class="font-weight-bold mb-3">Information chi tiết</p>
     
     {!! $GetProductDetail->content !!}
   </div>
   <div class="bg-white mt-3 p-3">
-    <p class="font-weight-bold mb-3">Đánh giá sản phẩm</p>
+    <p class="font-weight-bold mb-3">Đánh giá Products</p>
     @forelse($GetProductReview as $GetProductReview)
     <div>
       <div class="d-flex fz95">
@@ -219,7 +219,7 @@ Add to cart</div>
     @empty
     <div class="pb-5" style="margin:auto;width: 350px;">
       <img src="{{ asset("Index/images/icons/empty.svg")}}" width="100%">
-      <p class="text-center font-weight-bold mt-3">Rất tiếc, chưa có dữ liệu</p>
+      <p class="text-center font-weight-bold mt-3">Rất tiếc, No data yet</p>
     </div>
     @endforelse
 

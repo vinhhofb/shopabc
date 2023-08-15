@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Chỉnh sữa mẫu email')
+@section('Title', 'Edit mail template')
 @section('Content')
 <div class="container-scroller">
   <x-admin.layouts.header-dashboard/>
@@ -17,7 +17,7 @@
               <div class="col-12 col-xl-12 mb-4 mb-xl-0 p-0">
                 <div>
                   <div class="bg-white p-4">
-                    <h4 class="mb-4">Chỉnh sữa mẫu email</h4>
+                    <h4 class="mb-4">Edit mail template</h4>
                     <form method="post" action="{{url('admin/chien-dich-email/mau-email/sua')."/".$getEmailTemplate->id}}">
                       @csrf
                       <div class="row m-0">
@@ -25,14 +25,14 @@
                           <label class="fz95">Title</label>
 
                           <input type="text" value="{{$getEmailTemplate->template_title}}" name="template_title" class="form-control mr-2" required>
-                          <p class="mt-1 mb-0">Ghi chú: chèn <span class="text-warning">%ten_nguoi_nhan%</span> vào nội dung để hệ thống tự thay đổi tên phù hợp khi gửi mail nhiều người</p>
+                          <p class="mt-1 mb-0">Notes: insert <span class="text-warning">%User%</span> Enter the content so that the System automatically changes the appropriate Name when sending mail to many people</p>
                         </div>
                         <div class="col-12 p-0 mb-2">
-                          <label class="fz95">Nội dung</label>
+                          <label class="fz95">Content</label>
                           <textarea class="mytextarea" value="{{ (old('template_content')) ?? ""}}"  name="template_content"  style="width: 100%;height: 300px">
                             {{$getEmailTemplate->template_content}}
                           </textarea>
-                          <p class="mt-1 mb-0 " >Ghi chú: chèn <span class="text-warning">%ten_nguoi_nhan%</span> vào nội dung để hệ thống tự thay đổi tên phù hợp khi gửi mail nhiều người</p>
+                          <p class="mt-1 mb-0 " >Notes: insert <span class="text-warning">%User%</span> Enter the content so that the System automatically changes the appropriate Name when sending mail to many people</p>
                         </div>
                         <div class="col-12 p-0 pr-2 mb-2 text-center mt-3">
                           <button class="btn bg text-white">Change</button>
@@ -55,7 +55,6 @@
     tinymce.init({
       selector: '.mytextarea',
       height: 600,
-      language: 'vi_VN',
       plugins: [
       'a11ychecker advcode advlist anchor autolink codesample fullscreen help image tinydrive',
       ' lists link media noneditable powerpaste preview',

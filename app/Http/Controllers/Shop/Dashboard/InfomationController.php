@@ -22,6 +22,6 @@ class InfomationController extends Controller
                 'email'=>$request->email,
             ]
         );
-         return redirect()->back()->with('msg', 'Đổi thông tin thành công'); 
+         return redirect()->back()->with('msg', 'Đổi thông tin Success'); 
     }
 }

@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Change tỉnh thành')
+@section('Title', 'Change location')
 @section('Content')
 <div class="container-scroller">
   <x-admin.layouts.header-dashboard/>
@@ -17,19 +17,19 @@
               <div class="col-12 col-xl-12 mb-4 mb-xl-0">
                 <div>
                   <div class="bg-white p-4">
-                    <h4 class="mb-4">Change tỉnh thành</h4>
+                    <h4 class="mb-4">Change location</h4>
                     <form action="{{url('admin/quan-ly-dia-diem/sua-thanh-pho')."/".$GetCityById->id}}" method="post" enctype="multipart/form-data">
                       @csrf
                       <div class="row">
                         <div class="col-md-6 pr-1">
                           <div class="form-group">
-                            <label>Tên thành phố</label>
+                            <label>name</label>
                             <input type="text" class="form-control"  placeholder="Thành phố" value="{{$GetCityById->name}}" name="name" required>
                           </div>
                         </div>
                         <div class="col-md-4 px-1">
                           <div class="form-group">
-                            <label>Hình ảnh</label>
+                            <label>Image</label>
                             <input type="file" class="form-control" placeholder="image" name="image">
                           </div>
                         </div>
@@ -40,7 +40,7 @@
                        </div>
                      </div>
 
-                     <button type="submit" class="btn btn-info btn-fill pull-right">Sửa</button>
+                     <button type="submit" class="btn btn-info btn-fill pull-right">Edit</button>
                      <div class="clearfix"></div>
                    </form>
                  </div>

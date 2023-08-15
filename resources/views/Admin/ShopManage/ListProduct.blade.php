@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Quản lý sản phẩm')
+@section('Title', 'Quản lý Products')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -28,17 +28,17 @@
                     <div class="col-lg-12 grid-margin stretch-card p-0">
                       <div class="card">
                         <div class="card-body">
-                         <h4 class="card-title float-left">Danh sách sản phẩm</h4>
+                         <h4 class="card-title float-left">Product List</h4>
 
                          <div class="table-responsive">
                           <table class="table table-hover table-striped">
                             <thead>
                               <th>ID</th>
-                              <th>Hình đại diện</th>
-                              <th width="30%">Tên sản phẩm</th>
-                              <th>Giá tiền</th>
+                              <th>Image</th>
+                              <th width="30%">Product Name</th>
+                              <th>Price</th>
                               <th>Status</th>
-                              <th>Thao tác</th>
+                              <th>Method</th>
                             </thead>
                             <tbody>
                               @foreach($GetProducts as $GetProduct)
@@ -48,19 +48,19 @@
                                   <img src="{{ asset("index/images/products")."/".$GetProduct->image}}" width="50px" height="50px">
                                 </td>
                                 <td>{{$GetProduct->name}}</td>
-                                <td>{{number_format($GetProduct->price)}}đ/{{$GetProduct->unit}}</td>
+                                <td>{{number_format($GetProduct->price)}}$/{{$GetProduct->unit}}</td>
                                 <td>
                                   @if($GetProduct->active == 1)
-                                  Đang hoạt động
+                                  Active
                                   @elseif($GetProduct->active == 0)
-                                  Tạm khóa
+                                  Hiden
                                   @endif
                                 </td>
                                 <td>                                                                 
                                   @if($GetProduct->active == 1)
-                                  <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetProduct->id}}">Tạm khóa</button>
+                                  <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetProduct->id}}">Hiden</button>
                                   @elseif($GetProduct->active == 0)
-                                  <button class="btn btn-success" data-toggle="modal" data-target="#exampleModalUnLock{{$GetProduct->id}}">Hiển thị</button>
+                                  <button class="btn btn-success" data-toggle="modal" data-target="#exampleModalUnLock{{$GetProduct->id}}">Show</button>
                                   @endif
 
                                 {{--  </a> --}}
@@ -70,19 +70,19 @@
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Khóa cửa hàng</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Lock Store</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                    <p>Khi bạn khóa sản phẩm {{$GetProduct->name}}, {{$GetProduct->name}} sẽ bị ẩn khỏi trang chủ cho đến khi bạn mở khóa.</p>
+                                    <p>When you lock Products {{$GetProduct->name}}, {{$GetProduct->name}} will be hidden from the homepage until you unlock it.</p>
                                   </div>
                                   <div class="p-2">
-                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                    <a  href="{{url('admin/quan-ly-cua-hang/quan-ly-san-pham/khoa-mo-san-pham')."/".$GetProduct->id}}">
                                     <button type="button" class="btn btn-danger float-right mr-2">
-                                      Khóa                    
+                                      Lock                    
                                     </button>
                                   </a>
 
@@ -96,19 +96,19 @@
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Mở khóa cửa hàng</h5>
+                                  <h5 class="modal-title" id="exampleModalLabel">Unlock Store</h5>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                 <p>Khi bạn mở khóa sản phẩm {{$GetProduct->name}}, {{$GetProduct->name}} sẽ hiển thị trở lại tại trang chủ.</p>
+                                 <p>When Unlock Products {{$GetProduct->name}}, {{$GetProduct->name}} Will show back at home page.</p>
                                </div>
                                <div class="p-2">
-                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                  <a  href="{{url('admin/quan-ly-cua-hang/quan-ly-san-pham/khoa-mo-san-pham')."/".$GetProduct->id}}">
                                   <button type="button" class="btn btn-success float-right mr-2">
-                                    Mở khóa                    
+                                    Unlock                    
                                   </button>
                                 </a>
 

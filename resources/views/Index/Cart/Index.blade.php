@@ -121,7 +121,7 @@
         <div class="btn bg w-100 text-white mt-3 cs">
           <p class="mb-0" style="font-size:80%">Wallet: {{number_format(Auth::user()->balance)}}$</p>
           @if(Auth::user()->balance < $total+$total*$getConfig[0]->value/100-$total*$getConfig[1]->value/100)
-          <a href="{{url('nap-tien')}}">Nạp thêm</a>
+          <a href="{{url('nap-tien')}}">Nạp Add</a>
           @else
           <input id="fee-ship-value" type="number" hidden name="total" value="{{$total+$total*$getConfig[0]->value/100-$total*$getConfig[1]->value/100}}">
           <button type="submit" class="text-white" style="background: none;border: 0;outline: none;">Payment</button>

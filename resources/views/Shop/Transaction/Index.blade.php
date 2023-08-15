@@ -43,7 +43,7 @@
                                       Ngày giao dịch
                                     </th>
                                     <th>
-                                      Thao tác
+                                      Method
                                     </th>
                                   </tr>
                                 </thead>
@@ -56,7 +56,7 @@
                                       Payment hàng
                                     </td>
                                     <td>
-                                     <div class="badge badge-warning badge-pill my-auto mx-2">Thành công</div>
+                                     <div class="badge badge-warning badge-pill my-auto mx-2">Success</div>
                                     </td>
                                     <td>
                                       17/07/2022 12:30
@@ -73,7 +73,7 @@
                                       Payment hàng
                                     </td>
                                     <td>
-                                     <div class="badge badge-info badge-pill my-auto mx-2">Thành công</div>
+                                     <div class="badge badge-info badge-pill my-auto mx-2">Success</div>
                                     </td>
                                     <td>
                                       17/07/2022 12:30
@@ -90,7 +90,7 @@
                                       Payment hàng
                                     </td>
                                     <td>
-                                     <div class="badge badge-success badge-pill my-auto mx-2">Thành công</div>
+                                     <div class="badge badge-success badge-pill my-auto mx-2">Success</div>
                                     </td>
                                     <td>
                                       17/07/2022 12:30
@@ -107,7 +107,7 @@
                                       Payment hàng
                                     </td>
                                     <td>
-                                     <div class="badge badge-danger badge-pill my-auto mx-2">Thành công</div>
+                                     <div class="badge badge-danger badge-pill my-auto mx-2">Success</div>
                                     </td>
                                     <td>
                                       17/07/2022 12:30

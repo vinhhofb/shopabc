@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Quản lý danh mục')
+@section('Title', 'Categories')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -30,10 +30,10 @@
                     <div class="col-lg-12 grid-margin stretch-card p-0">
                       <div class="card">
                         <div class="card-body">
-                          <h4 class="card-title float-left">Danh sách danh mục</h4>
+                          <h4 class="card-title float-left">Category List</h4>
                          <div class="float-right"> 
                            <a href="{{url("admin/quan-ly-danh-muc/them-danh-muc")}}">
-                            <div class="btn btn-success">Thêm danh mục</div>
+                            <div class="btn btn-success">Add</div>
                           </a> 
                         </div>
                         <div style="clear: both;"></div>
@@ -41,10 +41,10 @@
                         <div class="table-responsive">
                           <table class="table table-hover table-striped">
                             <thead>
-                              <th>Stt</th>
+                              <th>code</th>
 
-                              <th>Tên danh mục</th>
-                              <th>Thao tác</th>
+                              <th>Name</th>
+                              <th>Method</th>
                             </thead>
                             <tbody>
                              <p style="display: none">{{$id = 1}}</p>
@@ -54,28 +54,28 @@
                               <td>{{$Category->name}}</td>
                               <td>                                        
                                 <a href="{{url('admin/quan-ly-danh-muc/sua-danh-muc'."/".$Category->id)}}">
-                                  <button class="btn btn-primary mr-2">Sửa</button> 
+                                  <button class="btn btn-primary mr-2">Edit</button> 
                                 </a>
-                                <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$Category->id}}">Xóa</button>                                                                         
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$Category->id}}">Delete</button>                                                                         
                               </td>
                             </tr>
                             <div class="modal fade mt-5" id="exampleModalBlock{{$Category->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Xóa danh mục</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Delete category</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                   <p>Khi bạn xóa danh mục {{$Category->name}}, All cả các cửa hàng có danh mục {{$Category->name}} sẽ bị xóa.</p>
+                                   <p>When delete category {{$Category->name}}, All stores with categories {{$Category->name}} Will delete</p>
                                  </div>
                                  <div class="p-2">
-                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                    <a href="{{url('admin/quan-ly-danh-muc/xoa-danh-muc')."/".$Category->id}}">
                                     <button type="button" class="btn btn-danger float-right mr-2">
-                                      Xóa                   
+                                      Delete                   
                                     </button>
                                   </a>
 
@@ -90,19 +90,19 @@
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Mở khóa người dùng</h5>
+                                  <h5 class="modal-title" id="exampleModalLabel">Unlock user</h5>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                 <p>Khi bạn mở khóa {{$Category->name}}, {{$Category->name}} sẽ có thể đăng nhập và sử dụng các chức năng của người dùng.</p>
+                                 <p>When Unlock {{$Category->name}}, {{$Category->name}} will be able to login and use user functions.</p>
                                </div>
                                <div class="p-2">
-                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                  <a  href="{{url('admin/quan-ly-nguoi-dung/khoa-mo-nguoi-dung')."/".$Category->id}}">
                                   <button type="button" class="btn btn-success float-right mr-2">
-                                    Mở khóa                    
+                                    Unlock                    
                                   </button>
                                 </a>
 

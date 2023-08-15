@@ -57,18 +57,18 @@
                                 <td>
                                   @if($getPayment->type == 2)
                                   @if($getPayment->status == 0)
-                                  <span class="text-warning">Chờ xử lý</span>
+                                  <span class="text-warning">Pending</span>
                                   @elseif($getPayment->status == 1)
                                   <span class="text-success">Đã chuyển khoản</span>
                                   @endif
                                   @else
-                                  <span class="text-success">Thành công</span>
+                                  <span class="text-success">Success</span>
                                   @endif
                                 </td>
                                 <td>{{\Carbon\Carbon::parse($getPayment->created_at)->setTimezone('Asia/Ho_Chi_Minh')->format('d/m/Y')}}</td>
                               </tr>
                               @empty
-                              <span>Chưa có dữ liệu</span>
+                              <span>No data yet</span>
                               @endforelse
 
                             </tbody>

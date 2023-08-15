@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Danh sách cửa hàng')
+@section('Title', 'Store List')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -28,12 +28,12 @@
                     <div class="col-lg-12 grid-margin stretch-card p-0">
                       <div class="card">
                         <div class="card-body">
-                         <h4 class="card-title float-left">Danh sách cửa hàng</h4>
+                         <h4 class="card-title float-left">Store List</h4>
                         {{--  <div class="float-right"> 
                           <form method="get" action="{{url('admin/quan-ly-nguoi-dung/tim-kiem')}}">    
                             <div class="form-group" style="display: flex">                           
                               <input type="number" class="form-control"  placeholder="Your phone" name="keyword">
-                              <button type="submit" class="btn btn-success ml-2">Tìm</button>
+                              <button type="submit" class="btn btn-success ml-2">Search</button>
                             </div>
                           </form> 
                         </div>
@@ -41,12 +41,12 @@
                         <div class="table-responsive">
                           <table class="table table-hover table-striped">
                             <thead>
-                              <th>Stt</th>
-                              <th width="20%">Tên người dùng</th>
+                              <th>code</th>
+                              <th width="20%">Username</th>
                               <th width="17%">Email</th>
                               <th width="17%">Phone</th>
                               <th width="17%">Status</th>
-                              <th>Thao tác</th>
+                              <th>Method</th>
                             </thead>
                             <tbody>
                              <p style="display: none">{{$idup = 1}}</p>
@@ -55,14 +55,14 @@
                               <td>{{$idup++}}</td>
                               <td>
                                 @if($GetShop->name ==null)
-                                Chưa cập nhật
+                                Not update
                                 @else
                                 {{$GetShop->name}}
                                 @endif
                               </td>
                               <td>
                                 @if($GetShop->email ==null)
-                                Chưa cập nhật
+                                Not update
                                 @else
                                 {{$GetShop->email}}
                                 @endif
@@ -71,9 +71,9 @@
 
                               <td>
                                 @if($GetShop->active == 1)
-                                Đang hoạt động
+                                Active
                                 @elseif($GetShop->active == 0)
-                                Tạm khóa
+                                Hiden
                                 @endif
                               </td>
                               <td>
@@ -81,9 +81,9 @@
                                   <button class="btn btn-success mr-2 mb-2">See store</button>
                                 </a>
                                 @if($GetShop->active == 1)
-                                <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetShop->id}}">Tạm khóa</button>
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModalBlock{{$GetShop->id}}">Hiden</button>
                                 @elseif($GetShop->active == 0)
-                                <button class="btn btn-success"  data-toggle="modal" data-target="#exampleModalUnLock{{$GetShop->id}}">Mở khóa</button>
+                                <button class="btn btn-success"  data-toggle="modal" data-target="#exampleModalUnLock{{$GetShop->id}}">Unlock</button>
                                 @endif                              
                               </td>
                             </tr>
@@ -91,19 +91,19 @@
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Khóa tài khoản cửa hàng</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Lock Store</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                   <p>Khi bạn khóa tài khoản cửa hàng {{$GetShop->name}}, {{$GetShop->name}} sẽ không thể đăng nhập và thực hiện các chức năng của cửa hàng.</p>
+                                   <p>When you Lock Store {{$GetShop->name}}, {{$GetShop->name}} will not be able to log in and perform Store functions.</p>
                                  </div>
                                  <div class="p-2">
-                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                   <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                    <a  href="{{url('admin/quan-ly-cua-hang/khoa-mo-tai-khoan-cua-hang')."/".$GetShop->id}}">
                                     <button type="button" class="btn btn-danger float-right mr-2">
-                                      Khóa                    
+                                      Lock                    
                                     </button>
                                   </a>
 
@@ -118,19 +118,19 @@
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Mở khóa người dùng</h5>
+                                  <h5 class="modal-title" id="exampleModalLabel">Unlock user</h5>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                 <p>Khi bạn mở khóa tài khoản cửa hàng {{$GetShop->name}}, {{$GetShop->name}} sẽ có thể đăng nhập và sử dụng các chức năng của một cửa hàng.</p>
+                                 <p>When UnLock Store {{$GetShop->name}}, {{$GetShop->name}} will be able to log in and use the functions of a Store.</p>
                                </div>
                                <div class="p-2">
-                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Hủy</button>
+                                 <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">Cancel</button>
                                  <a  href="{{url('admin/quan-ly-cua-hang/khoa-mo-tai-khoan-cua-hang')."/".$GetShop->id}}">
                                   <button type="button" class="btn btn-success float-right mr-2">
-                                    Mở khóa                    
+                                    Unlock                    
                                   </button>
                                 </a>
 

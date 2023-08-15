@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Danh sách email cấu hình')
+@section('Title', 'Email Config')
 @section('Content')
 <style type="text/css">
   @media only screen and (max-width: 900px) {
@@ -30,24 +30,24 @@
                     <div class="col-lg-12 grid-margin stretch-card p-0">
                       <div class="card">
                         <div class="card-body">
-                          <h4 class="card-title float-left">Chi tiết email gửi</h4>
+                          <h4 class="card-title float-left">Detail</h4>
 
 
                           <div class="table-responsive">
                             <table class="table table-hover table-striped">
                               <thead>
                                 <th>ID</th>
-                                <th>Email gửi</th>
-                                <th>Email nhận</th>
+                                <th>Mail send</th>
+                                <th>Email received</th>
                                 <th>Status</th>
-                                <th>Ngày gửi</th>
+                                <th>Date send</th>
 
                               </thead>
                               <tbody>
 
                                @forelse($getDetail as $item)
                                <tr>
-                                {{-- id mẫu mail --}}
+                                {{-- id Template --}}
                                 <td >{{$item->id}}</td>
                                 <td>
                                   {{-- tiêu đề mail --}}
@@ -58,11 +58,11 @@
                                </td>
                                <td>
                                 @if($item->receipt_status ==0)
-                                <p class="mb-0 text-warning">Chờ gửi</p>
+                                <p class="mb-0 text-warning">Pending</p>
                                 @elseif($item->receipt_status ==1)
-                                <p class="mb-0 text-success">Thành công</p>
+                                <p class="mb-0 text-success">Success</p>
                                 @elseif($item->receipt_status ==2)
-                                <p class="mb-0 text-danger">Gửi lỗi</p>
+                                <p class="mb-0 text-danger">Error</p>
                                 @endif
                               </td>
                               <td>
@@ -75,7 +75,7 @@
                               </td>
                             </tr>
                             @empty
-                            <td colspan="9">Chưa có dữ liệu</td>
+                            <td colspan="9">No data yet</td>
                             @endforelse
 
 

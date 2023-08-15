@@ -25,7 +25,7 @@
                         </div>
                       </div>
                       @empty
-                      <span>Chưa có dữ liệu</span>
+                      <span>No data yet</span>
                       @endforelse
                     </div>
                   </div>

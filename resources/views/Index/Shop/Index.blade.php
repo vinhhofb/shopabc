@@ -1,5 +1,5 @@
 @extends("Index.Layouts.Master")
-@section('Title', 'Cửa hàng')
+@section('Title', 'Store')
 @section('Content')
 <div class="container d-flex px-0" style="padding-top: 60px;">
   <div style="width: 210px;">

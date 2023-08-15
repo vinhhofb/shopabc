@@ -1,5 +1,5 @@
 @extends("Admin.Layouts.Master")
-@section('Title', 'Tạo chiến dịch email')
+@section('Title', 'Create email')
 @section('Content')
 <style type="text/css">
   .chosen-container-multi .chosen-choices li.search-field input[type="text"]{
@@ -22,17 +22,17 @@
               <div class="col-12 col-xl-12 mb-4 mb-xl-0 p-0">
                 <div>
                   <div class="bg-white p-4">
-                    <h4 class="mb-4">Tạo chiến dịch email</h4>
+                    <h4 class="mb-4">Create email</h4>
                     <form id="form-add-campaign" method="post" action="">
                       @csrf
-                      <p class="font-weight-bold mt-4">Thông tin</p>
+                      <p class="font-weight-bold mt-4">Information</p>
                       <div class="row m-0 p-4" style="border: 1px solid #ccc;">
                         <div class="col-6 pl-0">
-                          <label>Tên chiến dịch</label>
+                          <label>Name</label>
                           <input type="text" name="campaign_name" class="form-control" required>
                         </div>
                         <div class="col-6 pr-0">
-                          <label>Mẫu email gửi</label>
+                          <label>Template gửi</label>
                           <div class="form-group">
 
                             <select class="form-control" id="exampleFormControlSelect1" name="mail_template_id">
@@ -44,11 +44,11 @@
                           </div>
                         </div>
                       </div>
-                      <p class="font-weight-bold mt-4">Đối tượng gửi</p>
+                      <p class="font-weight-bold mt-4">Send</p>
                       <div class="row m-0 p-4"  style="border: 1px solid #ccc;">
 
                         <div class="col-12 p-0 mb-4 fz95">
-                          <label class="font-weight-bold fz95">Chọn nhóm người dùng</label><br>
+                          <label class="font-weight-bold fz95">Group user</label><br>
                           <div class="form-check-inline">
                             <label class="form-check-label">
                               <input type="radio" class="form-check-input" name="type_user" value="0">All
@@ -56,22 +56,22 @@
                           </div>
                           <div class="form-check-inline">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="type_user" value="3">Khách hàng
+                              <input type="radio" class="form-check-input" name="type_user" value="3">Customer
                             </label>
                           </div>
                           <div class="form-check-inline disabled">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="type_user" value="2">Cửa hàng
+                              <input type="radio" class="form-check-input" name="type_user" value="2">Store
                             </label>
                           </div>
                           <div class="form-check-inline disabled">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="type_user" value="4">Giao hàng
+                              <input type="radio" class="form-check-input" name="type_user" value="4">Shiper
                             </label>
                           </div>
                         </div>
                         <div class="col-12 p-0 mb-4 fz95">
-                          <label class=" font-weight-bold fz95">Chọn thành viên muốn gửi</label><br>
+                          <label class=" font-weight-bold fz95">Selete user</label><br>
                           <select name="list_user[]" class="chosen" data-order="true"  id="multiselect" multiple="true" style="height: 50px;width: 100%;">
                             @foreach ($listUser as $item )
                             <option value="{{$item->id}}">[ID: {{$item->id}}] {{$item->phone}} - {{$item->email}}</option>
@@ -87,21 +87,21 @@
                         
 
                       </div>
-                      <p class="font-weight-bold mt-4">Lịch trình gửi</p>
+                      <p class="font-weight-bold mt-4">Time</p>
                       <div class="row m-0 p-4" style="border: 1px solid #ccc;">
                         <div class="col-6 p-4">
                           <div class="form-check" >
                             <input type="checkbox" class="form-check-input " id="exampleCheck1" name="send_now" checked>
-                            <label class="form-check-label " for="exampleCheck1" style="margin-left: 3px !important;">Gửi ngay</label>
+                            <label class="form-check-label " for="exampleCheck1" style="margin-left: 3px !important;">Send now</label>
                           </div>
                         </div>
                         <div class="col-6 p-4">
-                          <label>Đặt lịch</label>
+                          <label>Set time</label>
                           <input type="datetime-local" name="start_date" class="form-control">
                         </div>
                       </div>
                       <div class="col-12 p-0 pr-2 mb-2 text-center mt-3">
-                        <div onclick="submitForm()" class="btn bg text-white">Tạo chiến dịch</div>
+                        <div onclick="submitForm()" class="btn bg text-white">Create</div>
                       </div>
                     </form>
                   </div>
@@ -145,7 +145,7 @@
         $("#result").text(value);
       }
     });
-    $('.chosen-search-input').val("Nhập danh sách")
+    $('.chosen-search-input').val("Select user")
   </script>
 
 

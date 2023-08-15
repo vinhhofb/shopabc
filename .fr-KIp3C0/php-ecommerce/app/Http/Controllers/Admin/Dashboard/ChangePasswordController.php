@@ -24,7 +24,7 @@ class ChangePasswordController extends Controller
         if($passwordNew == $passwordNewRe && $passwordNow == $CheckPassword->password){
             $CheckPassword->password = md5($passwordNew);
             $CheckPassword->save();
-            return redirect()->back()->with('msg', 'Change Password thành công'); 
+            return redirect()->back()->with('msg', 'Change Password Success'); 
         }else{
             return redirect()->back()->with('msg', 'Mật khẩu củ chưa chính xác');
         }

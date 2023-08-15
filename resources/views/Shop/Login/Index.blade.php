@@ -1,5 +1,5 @@
 @extends("Shop.Layouts.Master")
-@section('Title', 'Login cửa hàng')
+@section('Title', 'Login Store')
 @section('Content')
 
 <link rel="stylesheet" href="{{ asset('index/css/reponsive.css') }}">
@@ -8,7 +8,7 @@
   <div class="form-login-box bg-white mt-5 p-3" style="width: 30%;margin: auto;">
     <form id="login-user-form" action="{{url('kenh-cua-hang/dang-nhap')}}" method="post">
       @csrf
-      <p class="text-center font-weight-bold mt-1 tx" style="font-size: 110%">LOGIN CỬA HÀNG</p>
+      <p class="text-center font-weight-bold mt-1 tx" style="font-size: 110%">LOGIN Store</p>
       <hr>
       <p class="fz95 mt-2 mb-1">Your phone</p>
       <input type="number" name="phone" class="form-control w-100">
